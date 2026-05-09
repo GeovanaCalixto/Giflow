@@ -1,7 +1,6 @@
 :root {
   --bg: #08070d;
   --card: rgba(255, 255, 255, 0.06);
-  --card-strong: rgba(255, 255, 255, 0.12);
   --text: #f7f2ff;
   --muted: #b9adc9;
   --purple: #8b5cf6;
@@ -19,16 +18,12 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--text);
-  background:
-    radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.15), transparent 35%),
-    radial-gradient(circle at 85% 85%, rgba(255, 138, 61, 0.1), transparent 35%),
-    #08070d;
+  background: radial-gradient(circle at 15% 15%, rgba(139, 92, 246, 0.15), transparent 35%), #08070d;
   line-height: 1.6;
 }
 
-/* TOPBAR / MENU */
 .topbar {
   position: fixed;
   top: 20px;
@@ -79,7 +74,6 @@ body {
   color: white;
 }
 
-/* HERO SECTION */
 .hero {
   max-width: 1120px;
   margin: 0 auto;
@@ -90,6 +84,12 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: clamp(48px, 8vw, 100px);
+  margin: 10px 0;
+  line-height: 0.9;
+}
+
 .eyebrow {
   color: var(--orange);
   font-weight: 800;
@@ -98,30 +98,12 @@ body {
   letter-spacing: 1.5px;
 }
 
-h1 {
-  font-size: clamp(48px, 8vw, 100px);
-  margin: 10px 0;
-  line-height: 0.9;
-}
-
-h2 {
-  font-size: 24px;
-  color: var(--muted);
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-/* HERO CARD & PROFILE IMAGE (O AJUSTE DA FOTO) */
 .hero-card {
   background: var(--card);
   border: 1px solid var(--line);
-  backdrop-filter: blur(24px);
   border-radius: 32px;
   padding: 40px;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .profile-wrapper {
@@ -129,41 +111,16 @@ h2 {
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
   border: 3px solid var(--purple);
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
 }
 
-.google-logo {
-  font-size: 32px;
-  font-weight: 900;
-  margin-bottom: 12px;
-}
-
-.blue {
-  color: #4285f4;
-}
-
-.red {
-  color: #ea4335;
-}
-
-.yellow {
-  color: #fbbc05;
-}
-
-.green {
-  color: #34a853;
-}
-
-/* SECTIONS & GRIDS */
 .section {
   max-width: 1120px;
   margin: 0 auto;
@@ -175,12 +132,11 @@ h2 {
   font-weight: 800;
   text-transform: uppercase;
   font-size: 12px;
-  margin-bottom: 8px;
 }
 
+/* GRID E CARDS CENTRALIZADOS */
 .about-grid,
 .stories-grid,
-.dictionary-grid,
 .interview-bank-grid,
 .toolkit-grid {
   display: grid;
@@ -188,27 +144,20 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
 }
 
-/* CARDS GERAIS (ESTILO CHIC) */
 .glass-card,
-.story-card,
-.dictionary-card {
+.story-card {
   background: var(--card);
   border: 1px solid var(--line);
-  backdrop-filter: blur(20px);
   border-radius: 32px;
   padding: 28px;
-  transition: transform 0.3s ease, background 0.3s ease;
+  text-align: center;
+  /* CENTRALIZAÇÃO DO TEXTO */
+  backdrop-filter: blur(20px);
 }
 
-.story-card:hover {
-  transform: translateY(-5px);
-  background: var(--card-strong);
-}
-
-/* NARRATIVAS EXPANSÍVEIS (DETAILS/SUMMARY) */
 details.glass-card {
-  cursor: pointer;
   padding: 0;
+  cursor: pointer;
 }
 
 summary {
@@ -216,9 +165,7 @@ summary {
   padding: 28px;
   font-weight: bold;
   font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  text-align: center;
 }
 
 summary::-webkit-details-marker {
@@ -228,10 +175,9 @@ summary::-webkit-details-marker {
 .details-content {
   padding: 0 28px 28px;
   color: var(--muted);
-  font-size: 15px;
 }
 
-/* ASSISTENTE IA FLUTUANTE (MAXIMIZA/MINIMIZA) */
+/* IA FLOATING */
 .ai-trigger {
   position: fixed;
   bottom: 30px;
@@ -243,36 +189,31 @@ summary::-webkit-details-marker {
   border-radius: 50%;
   cursor: pointer;
   z-index: 1100;
-  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
   color: white;
   font-weight: 900;
-  font-size: 16px;
 }
 
 .assistant {
   position: fixed;
   bottom: 100px;
   right: 30px;
-  width: min(360px, 90vw);
-  height: 550px;
+  width: 360px;
+  height: 500px;
+  background: rgba(15, 14, 22, 0.98);
+  border: 1px solid var(--line);
+  border-radius: 24px;
   display: flex;
   flex-direction: column;
   z-index: 1050;
-  border-radius: 32px;
-  background: rgba(15, 14, 22, 0.95);
-  border: 1px solid var(--line);
-  backdrop-filter: blur(25px);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.3s ease;
 }
 
 .assistant.hidden {
   display: none;
-  opacity: 0;
-  transform: translateY(40px) scale(0.9);
 }
 
 .assistant-header {
-  padding: 20px;
+  padding: 16px;
   border-bottom: 1px solid var(--line);
   display: flex;
   align-items: center;
@@ -286,7 +227,6 @@ summary::-webkit-details-marker {
   background: linear-gradient(var(--orange), var(--purple));
 }
 
-/* BOTÕES DE IDIOMA (GRID AJUSTADO) */
 .assistant-modes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -304,32 +244,31 @@ summary::-webkit-details-marker {
   cursor: pointer;
   font-size: 11px;
   font-weight: 800;
-  transition: 0.2s;
 }
 
 .mode-btn.active {
-  background: linear-gradient(135deg, var(--purple), var(--orange));
-  border: none;
+  background: var(--purple);
   color: white;
+  border: none;
 }
 
 .assistant-messages {
   flex: 1;
   overflow-y: auto;
-  padding: 20px;
-  font-size: 14px;
+  padding: 16px;
 }
 
 .bot-message {
   background: rgba(139, 92, 246, 0.1);
   padding: 12px;
-  border-radius: 15px;
+  border-radius: 14px;
   margin-bottom: 12px;
   border: 1px solid rgba(139, 92, 246, 0.2);
+  font-size: 14px;
 }
 
 .assistant-form {
-  padding: 15px;
+  padding: 12px;
   display: flex;
   gap: 8px;
   border-top: 1px solid var(--line);
@@ -339,18 +278,18 @@ summary::-webkit-details-marker {
   flex: 1;
   background: #000;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
-  padding: 10px;
+  padding: 8px;
   outline: none;
 }
 
 .assistant-form button {
   background: var(--purple);
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   color: white;
-  padding: 10px 15px;
+  padding: 0 15px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -364,32 +303,14 @@ summary::-webkit-details-marker {
   cursor: pointer;
 }
 
-/* RESPONSIVIDADE */
-@media (max-width: 900px) {
-  .hero {
-    grid-template-columns: 1fr;
-    text-align: center;
-    padding-top: 120px;
-  }
+ @media (max-width: 900px) {
 
+  .hero,
   .about-grid,
   .stories-grid,
-  .dictionary-grid,
   .interview-bank-grid,
   .toolkit-grid {
     grid-template-columns: 1fr;
   }
 
-  .topbar {
-    padding: 10px 15px;
-  }
-
-  .nav {
-    gap: 10px;
-    font-size: 11px;
-  }
-
-  h1 {
-    font-size: 56px;
-  }
 }
