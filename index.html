@@ -5,106 +5,96 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>GiFlow | AI-Assisted Interview Prep</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="static/css/styles.css" />
 </head>
 
 <body>
 
 <header class="topbar">
-  <div class="brand">
-    <span class="brand-icon">G</span>
-    <span>GiFlow</span>
-  </div>
-
-  <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#stories">Stories</a>
-    <a href="#interview-bank">Bank</a>
-    <a href="#language-toolkit">Toolkit</a>
-    <a href="#dictionary">Dictionary</a>
-  </nav>
+<div class="brand">
+<span class="brand-icon">G</span>
+<span>GiFlow</span>
+</div>
+<nav class="nav">
+<a href="#about">About</a>
+<a href="#stories">Stories</a>
+<a href="#interview-bank">Bank</a>
+<a href="#language-toolkit">Toolkit</a>
+<a href="#dictionary">Dictionary</a>
+</nav>
 </header>
 
 <main>
-
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-content">
-    <p class="eyebrow">Personal AI-assisted interview system</p>
-    <h1>GiFlow</h1>
-    <h2>Strategic preparation for a Google interview.</h2>
-    <p class="hero-text">
-      A project built to accelerate learning, organize communication, and showcase a growth mindset.
-    </p>
-  </div>
-
-  <div class="hero-card">
-    <div class="profile-photo">
-      <img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto">
-    </div>
-
-    <div class="google-logo">
-      <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span>
-      <span class="blue">g</span><span class="green">l</span><span class="red">e</span>
-    </div>
-
-    <p>A personal operating system for communication and interview readiness.</p>
-  </div>
+<div class="hero-content">
+<p class="eyebrow">Personal AI-assisted interview system</p>
+<h1>GiFlow</h1>
+<h2>Strategic preparation for a Google interview.</h2>
+<p class="hero-text">
+A project built to accelerate learning, organize communication, and showcase a growth mindset.
+</p>
+</div>
+<div class="hero-card">
+<div class="profile-photo">
+<img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto"
+style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+</div>
+<div class="google-logo">
+<span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+class="blue">g</span><span class="green">l</span><span class="red">e</span>
+</div>
+<p>A personal operating system for communication and interview readiness.</p>
+</div>
 </section>
-
-<!-- ABOUT -->
+<!-- NARRATIVAS EXPANSÍVEIS -->
 <section class="section" id="about">
   <p class="section-label">About me</p>
   <h2>Narratives</h2>
-
   <div class="about-grid">
     <details class="glass-card">
-      <summary><h3>Short version</h3></summary>
+      <summary>
+        <h3>Short version</h3>
+      </summary>
       <p>I am a marketing-driven builder with startup energy and social impact experience.</p>
     </details>
-
     <details class="glass-card">
-      <summary><h3>Medium version</h3></summary>
+      <summary>
+        <h3>Medium version</h3>
+      </summary>
       <p>UI/UX specialist with an MBA in Web3, focusing on turning ambiguity into structure.</p>
     </details>
-
     <details class="glass-card">
-      <summary><h3>Long version</h3></summary>
-      <p>Career development as an OS. Experience with Único Roteiro and relief efforts in RS. Specialist in product design and high-quality visual edits.</p>
+      <summary>
+        <h3>Long version</h3>
+      </summary>
+      <p>Career development as an OS. Experience with Único Roteiro and relief efforts in RS. Specialist in product
+        design and high-quality visual edits.</p>
     </details>
   </div>
 </section>
 
-<!-- STORIES -->
-<section class="section" id="stories">
-  <p class="section-label">Stories</p>
-  <div class="stories-grid" id="storiesContainer"></div>
-</section>
-
-<!-- INTERVIEW BANK -->
+<!-- INTERVIEW BANK & TOOLKIT (CONTAINERS PARA O JS) -->
 <section class="section" id="interview-bank">
   <p class="section-label">Interview Bank</p>
-  <div class="interview-bank-grid" id="interviewBankGrid"></div>
+  <div class="interview-bank-grid" id="interviewBankGrid">
+    <!-- O seu arquivo app.js preencherá aqui -->
+  </div>
 </section>
 
-<!-- TOOLKIT -->
 <section class="section" id="language-toolkit">
   <p class="section-label">Language Toolkit</p>
-  <div class="toolkit-grid" id="languageToolkitGrid"></div>
+  <div class="toolkit-grid" id="languageToolkitGrid">
+    <!-- O seu arquivo app.js preencherá aqui -->
+  </div>
 </section>
 
-<!-- DICTIONARY -->
 <section class="section" id="dictionary">
   <p class="section-label">Dictionary</p>
-
   <div class="dictionary-grid">
     <div class="glass-card">
       <h3>Connectors</h3>
       <p>Focus on connectives like "of", "to" and quantifiers like "some".</p>
     </div>
-
     <div class="glass-card">
       <h3>Leadership</h3>
       <p>Ownership, alignment, and hands-on approach.</p>
@@ -112,49 +102,40 @@
   </div>
 </section>
 
-</main>
+  </main>
 
-<!-- AI -->
+<!-- IA MINIMIZADA (FLUTUANTE) -->
 <div id="ai-container">
-
-  <button id="ai-trigger" class="ai-trigger">
-    <span>AI</span>
-  </button>
+<button id="ai-trigger" class="ai-trigger">
+<span>AI</span>
+</button>
 
   <section class="assistant hidden" id="assistant">
-
-    <div class="assistant-header">
-      <div class="assistant-avatar"></div>
-
-      <div class="header-info">
-        <h3>GiFlow AI</h3>
-        <p>Contextual Prep</p>
-      </div>
-
-      <button id="close-ai" class="close-btn">&times;</button>
+  <div class="assistant-header">
+    <div class="assistant-avatar"></div>
+    <div class="header-info">
+      <h3>GiFlow AI</h3>
+      <p>Contextual Prep</p>
     </div>
-
-    <div class="assistant-modes">
-      <button class="mode-btn active" data-mode="bilingual">Bilingual</button>
-      <button class="mode-btn" data-mode="english">English</button>
-      <button class="mode-btn" data-mode="portuguese">Português</button>
-      <button class="mode-btn" data-mode="translate">Translate</button>
-    </div>
-
-    <div class="assistant-messages" id="chat-messages">
-      <div class="bot-message">Ready to prep!</div>
-    </div>
-
-    <form class="assistant-form" id="chat-form">
-      <input type="text" id="user-input" placeholder="Ask me..." />
-      <button type="submit">Send</button>
-    </form>
-
-  </section>
-
+    <button id="close-ai" class="close-btn">&times;</button>
+  </div>
+  <div class="assistant-modes">
+    <button class="mode-btn active" data-mode="bilingual">Bilingual</button>
+    <button class="mode-btn" data-mode="english">English</button>
+    <button class="mode-btn" data-mode="portuguese">Português</button>
+    <button class="mode-btn" data-mode="translate">Translate</button>
+  </div>
+  <div class="assistant-messages" id="chat-messages">
+    <div class="bot-message">Ready to prep!</div>
+  </div>
+  <form class="assistant-form" id="chat-form">
+    <input type="text" id="user-input" placeholder="Ask me..." />
+    <button type="submit">Send</button>
+  </form>
+</section>
 </div>
 
 <script src="static/js/app.js"></script>
 </body>
-  
+
 </html>
