@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>GiFlow | AI-Assisted Interview Preparation</title>
+  <!-- Caminhos ajustados para o GitHub Pages -->
+  <link rel="icon" type="image/png" href="static/images/favicon.png" />
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">G</span>
+      <span>GiFlow</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#stories">Stories</a>
+      <a href="#interview-bank">Interview Bank</a>
+      <a href="#language-toolkit">Toolkit</a>
+      <a href="#dictionary">Dictionary</a>
+      <a href="#assistant">AI</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">Personal AI-assisted interview system</p>
+        <h1>GiFlow</h1>
+        <h2>Strategic preparation for a Google interview.</h2>
+        <p class="hero-text">
+          This project is not about hiding limitations. It is about showing how I build
+          systems to accelerate learning, organize communication, and improve performance.
+        </p>
+        <div class="hero-tags">
+          <span>Growth mindset</span>
+          <span>Storytelling</span>
+          <span>AI-assisted workflow</span>
+        </div>
+      </div>
+
+      <div class="profile-photo">
+        <!-- Caminho da imagem ajustado -->
+        <img src="/static/images/fotodeperfil.jpeg" alt="Profile photo" />
+      </div>
+
+      <div class="google-logo">
+        <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+          class="blue">g</span><span class="green">l</span><span class="red">e</span>
+      </div>
+
+      <p>
+        A personal operating system for communication, behavioral stories,
+        vocabulary, and interview readiness.
+      </p>
+    </section>
+
+    <!-- ... (restante das seções permanecem iguais) ... -->
+
+    <section class="section" id="about">
+      <p class="section-label">About me</p>
+      <h2>Three versions of my personal narrative.</h2>
+      <div class="about-grid">
+        <article class="glass-card">
+          <h3>Short version</h3>
+          <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset.</p>
+        </article>
+        <!-- Adicione as outras versões aqui conforme seu original -->
+      </div>
+    </section>
+
+    <!-- SEÇÕES CARREGADAS POR JS -->
+    <section class="section" id="interview-bank">
+      <p class="section-label">Interview bank</p>
+      <div class="interview-bank-grid" id="interviewBankGrid"></div>
+    </section>
+
+    <section class="section" id="language-toolkit">
+      <p class="section-label">Language toolkit</p>
+      <div class="toolkit-grid" id="languageToolkitGrid"></div>
+    </section>
+
+    <!-- ASSISTENTE AI -->
+    <section class="assistant" id="assistant">
+      <div class="assistant-header">
+        <div class="assistant-avatar"></div>
+        <div>
+          <h3>GiFlow AI</h3>
+          <p>Contextual prep assistant</p>
+        </div>
+      </div>
+      <div class="assistant-modes">
+        <button type="button" class="mode-btn active" data-mode="bilingual">Bilingual</button>
+        <button type="button" class="mode-btn" data-mode="english">English</button>
+        <button type="button" class="mode-btn" data-mode="portuguese">Português</button>
+        <button type="button" class="mode-btn" data-mode="translate">Translate</button>
+      </div>
+      <div class="assistant-messages" id="chat-messages">
+        <div class="bot-message">Ask me about leadership, conflict, pressure, vocabulary, or STAR answers.</div>
+      </div>
+      <form class="assistant-form" id="chat-form">
+        <input type="text" id="user-input" placeholder="Tell me about leadership" />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Script ajustado -->
+  <script src="/static/js/app.js"></script>
+</body>
+
+</html>
