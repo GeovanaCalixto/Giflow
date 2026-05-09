@@ -56,59 +56,111 @@
       </div>
     </section>
 
-    <!-- SEÇÃO ABOUT -->
+    <!-- SECTION ABOUT -->
     <section class="section" id="about">
       <p class="section-label">About me</p>
       <h2>Three versions of my personal narrative.</h2>
-      <div class="about-grid" id="aboutGrid">
+      <div class="about-grid">
         <article class="glass-card">
           <h3>Short version</h3>
-          <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset.</p>
+          <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset focused
+            on learning fast and communicating clearly.</p>
         </article>
         <article class="glass-card">
           <h3>Medium version</h3>
-          <p>My background connects marketing, leadership, and an MBA in Web3. I like turning ambiguity into structure.
-          </p>
+          <p>My background connects marketing, leadership, volunteering, startup environments, and an MBA in Web3. I
+            like turning ambiguity into structure and using technology to learn faster.</p>
         </article>
         <article class="glass-card">
           <h3>Long version</h3>
-          <p>I see career development as an operating system. GiFlow translates that mindset into preparation.</p>
+          <p>I see career development as an operating system: goals, feedback loops, practice, vocabulary, stories, and
+            reflection. GiFlow translates that mindset into a practical preparation environment.</p>
         </article>
       </div>
     </section>
 
-    <!-- SEÇÃO STORIES -->
+    <!-- SECTION STORIES (CONTEÚDO RESTAURADO) -->
     <section class="section" id="stories">
       <p class="section-label">Core stories</p>
-      <div class="stories-grid" id="storiesGrid">
-        <!-- Conteúdo estático ou carregado via JS -->
+      <h2>Behavioral examples organized with structure.</h2>
+      <div class="stories-grid">
+        <article class="story-card">
+          <h3>Leadership</h3>
+          <p><strong>Situation:</strong> Different people had different priorities and communication styles.</p>
+          <p><strong>Challenge:</strong> Create alignment without relying only on authority.</p>
+          <p><strong>Action:</strong> I listened first, clarified goals, and broke the problem into next steps.</p>
+          <p><strong>Result:</strong> The team moved with more clarity and ownership.</p>
+        </article>
+        <article class="story-card">
+          <h3>Conflict Resolution</h3>
+          <p><strong>Situation:</strong> Stakeholders had different expectations about priorities.</p>
+          <p><strong>Challenge:</strong> Avoid losing time, trust, and focus.</p>
+          <p><strong>Action:</strong> I reframed the conversation around shared goals.</p>
+          <p><strong>Result:</strong> The team regained alignment.</p>
+        </article>
+        <article class="story-card">
+          <h3>Pressure</h3>
+          <p><strong>Situation:</strong> I had multiple responsibilities during intense periods.</p>
+          <p><strong>Challenge:</strong> Stay focused without trying to solve everything at once.</p>
+          <p><strong>Action:</strong> I prioritized high-impact tasks and created a simple rhythm.</p>
+          <p><strong>Result:</strong> I protected quality and kept improving.</p>
+        </article>
       </div>
     </section>
 
-    <!-- SEÇÃO INTERVIEW BANK -->
+    <!-- SECTION INTERVIEW BANK (DINÂMICO) -->
     <section class="section" id="interview-bank">
       <p class="section-label">Interview bank</p>
+      <h2>Strategic answers for high-impact interview questions.</h2>
       <div class="interview-bank-grid" id="interviewBankGrid"></div>
     </section>
 
-    <!-- SEÇÃO TOOLKIT -->
+    <!-- SECTION TOOLKIT (DINÂMICO) -->
     <section class="section" id="language-toolkit">
       <p class="section-label">Language toolkit</p>
+      <h2>Connectives, strong verbs, and phrases that help under pressure.</h2>
       <div class="toolkit-grid" id="languageToolkitGrid"></div>
     </section>
 
-    <!-- SEÇÃO DICTIONARY -->
+    <!-- SECTION DICTIONARY (CONTEÚDO RESTAURADO) -->
     <section class="section" id="dictionary">
-      <p class="section-label">Dictionary</p>
-      <div class="dictionary-grid" id="dictionaryGrid"></div>
+      <p class="section-label">Interview dictionary</p>
+      <h2>Vocabulary and phrases for fluency.</h2>
+      <div class="dictionary-grid">
+        <div class="dictionary-card">
+          <h3>Connectors</h3>
+          <ul>
+            <li>First, I would like to give some context</li>
+            <li>The main challenge was</li>
+            <li>As a result</li>
+            <li>Looking back</li>
+          </ul>
+        </div>
+        <div class="dictionary-card">
+          <h3>Leadership vocabulary</h3>
+          <ul>
+            <li>Ownership</li>
+            <li>Alignment</li>
+            <li>Hands-on approach</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+        <div class="dictionary-card">
+          <h3>Fluency support</h3>
+          <ul>
+            <li>Let me rephrase that</li>
+            <li>What I mean is</li>
+            <li>The key point is</li>
+            <li>To make it more concrete</li>
+          </ul>
+        </div>
+      </div>
     </section>
-
   </main>
 
-  <!-- BOTÃO FLUTUANTE (TRIGGER) -->
+  <!-- IA WIDGET (O QUE ATUALIZAMOS) -->
   <button id="chat-trigger" class="chat-trigger">G</button>
 
-  <!-- ASSISTENTE (WIDGET FLUTUANTE) -->
   <section class="assistant chat-closed" id="assistant">
     <div class="assistant-header">
       <div class="assistant-avatar"></div>
@@ -134,10 +186,9 @@
       <input type="text" id="user-input" placeholder="Tell me about leadership" />
       <button type="submit">Send</button>
     </form>
-  </section>
 
+   </section>
 
-  
   <script src="static/js/app.js"></script>
 </body>
 
