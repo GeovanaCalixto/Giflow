@@ -1,17 +1,35 @@
 // GiFlow AI - Versão Estática para GitHub Pages
 // Desenvolvido por Geovana Calixto | UI/UX Specialist
 
-const form = document.querySelector("#chat-form"); // Ajustado para o ID do seu HTML
-const input = document.querySelector("#user-input"); // Ajustado para o ID do seu HTML
-const messages = document.querySelector("#chat-messages"); // Ajustado para o ID do seu HTML
+const form = document.querySelector("#chat-form");
+const input = document.querySelector("#user-input");
+const messages = document.querySelector("#chat-messages");
 const modeButtons = document.querySelectorAll(".mode-btn");
 const interviewBankGrid = document.querySelector("#interviewBankGrid");
 const languageToolkitGrid = document.querySelector("#languageToolkitGrid");
 
-let currentMode = "bilingual";
-let globalData = {}; // Armazena os JSONs carregados
+// Seletores para o Widget
+const chatTrigger = document.querySelector("#chat-trigger");
+const assistant = document.querySelector("#assistant");
+const closeChat = document.querySelector("#close-chat");
 
-// 1. UTILITÁRIOS
+let currentMode = "bilingual";
+let globalData = {};
+
+// --- LÓGICA DE INTERFACE (ABRIR/FECHAR) ---
+if (chatTrigger) {
+  chatTrigger.addEventListener("click", () => {
+    assistant.classList.toggle("hidden");
+  });
+}
+
+if (closeChat) {
+  closeChat.addEventListener("click", () => {
+    assistant.classList.add("hidden");
+  });
+}
+
+// --- UTILITÁRIOS ---
 function normalizeText(text) {
   if (!text) return "";
   return text.toLowerCase()
@@ -29,7 +47,7 @@ function scoreMatch(message, keywords) {
   return score;
 }
 
-// 2. INTERFACE (Mensagens e Cards)
+// --- MENSAGENS ---
 function addMessage(type, title, text, tips = []) {
   const message = document.createElement("div");
   message.classList.add(type === "user" ? "user-message" : "bot-message");
@@ -56,7 +74,7 @@ function addLoadingMessage() {
   return message;
 }
 
-// 3. CRIAÇÃO DINÂMICA DE CARDS
+// --- CRIAÇÃO DE CARDS DINÂMICOS ---
 function createBankCard(key, item) {
   const card = document.createElement("article");
   card.classList.add("bank-card");
@@ -84,7 +102,7 @@ function createToolkitCard(title, items, fields) {
   return card;
 }
 
-// 4. LÓGICA DO ASSISTENTE
+// --- LÓGICA DO ASSISTENTE ---
 function getAIResponse(userText, mode) {
   const msg = normalizeText(userText);
 
@@ -140,7 +158,7 @@ function getAIResponse(userText, mode) {
   };
 }
 
-// 5. INICIALIZAÇÃO E EVENTOS
+// --- INICIALIZAÇÃO ---
 async function loadPageContent() {
   try {
     const files = ['stories', 'dictionary', 'prompts', 'personal_profile', 'language_support', 'interview_bank'];
@@ -149,7 +167,6 @@ async function loadPageContent() {
       globalData[file] = await response.json();
     }
 
-    // Popular Grids
     if (interviewBankGrid && globalData.interview_bank) {
       interviewBankGrid.innerHTML = "";
       Object.entries(globalData.interview_bank).forEach(([key, item]) => {
@@ -194,5 +211,5 @@ if (form) {
   });
 }
 
-loadPageContent();
 
+ loadPageContent();
