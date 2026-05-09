@@ -4,100 +4,72 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GiFlow | AI-Assisted Interview Prep</title>
+  <title>GiFlow | Strategic Preparation</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <header class="topbar">
-    <div class="brand">
-      <span class="brand-icon">G</span>
-      <span>GiFlow</span>
-    </div>
-    <nav class="nav">
-      <a href="#about">About</a>
-      <a href="#stories">Stories</a>
-      <a href="#interview-bank">Bank</a>
-      <a href="#language-toolkit">Toolkit</a>
-      <a href="#dictionary">Dictionary</a>
-    </nav>
+  <header class="header">
+    <div class="brand">GiFlow</div>
+    <h1>Strategic preparation for a Google interview.</h1>
+    <p class="description">
+      A project built to accelerate learning, organize communication, and showcase a growth mindset.
+    </p>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Personal AI-assisted interview system</p>
-        <h1>GiFlow</h1>
-        <h2>Strategic preparation for a Google interview.</h2>
-        <p class="hero-text">
-          A project built to accelerate learning, organize communication, and showcase a growth mindset.
-        </p>
-      </div>
-      <div class="hero-card">
-        <div class="profile-wrapper">
-          <img src="fotodeperfil.jpeg" alt="Geovana Calixto" class="profile-img">
-        </div>
-        <div class="google-logo">
-          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
-            class="blue">g</span><span class="green">l</span><span class="red">e</span>
-        </div>
-        <p>A personal operating system for communication and interview readiness.</p>
-      </div>
-    </section>
+  <main class="container">
+    <p class="section-label">Narratives</p>
 
-    <section class="section" id="about">
-      <p class="section-label">About me</p>
-      <h2>Narratives</h2>
-      <div class="about-grid" id="narrativesContainer">
+    <!-- CARD EXPANSÍVEL CENTRALIZADO (Long Version) -->
+    <details class="glass-card">
+      <summary>Long version</summary>
+      <div class="details-content">
+        <p>Career development as an OS. Experience with Único Roteiro and relief efforts in RS. Specialist in product
+          design and high-quality visual edits.</p>
       </div>
-    </section>
+    </details>
 
-    <section class="section" id="stories">
-      <p class="section-label">Core stories</p>
-      <h2>Behavioral examples.</h2>
-      <div class="stories-grid" id="storiesContainer">
+    <!-- CARD EXPANSÍVEL CENTRALIZADO (Medium Version) -->
+    <details class="glass-card">
+      <summary>Medium version</summary>
+      <div class="details-content">
+        <p>My background connects marketing, leadership, volunteering, and an MBA in Web3. I like turning ambiguity into
+          structure[cite: 1].</p>
       </div>
-    </section>
+    </details>
 
-    <section class="section" id="interview-bank">
-      <p class="section-label">Interview Bank</p>
-      <div class="interview-bank-grid" id="interviewBankGrid"></div>
-    </section>
-
-    <section class="section" id="language-toolkit">
-      <p class="section-label">Language Toolkit</p>
-      <div class="toolkit-grid" id="languageToolkitGrid"></div>
-    </section>
+    <p class="section-label" style="margin-top: 40px;">Core Stories</p>
+    <div class="stories-grid">
+      <div class="story-card">
+        <h3>Leadership</h3>
+        <p><strong>Situation:</strong> Different communication styles[cite: 1].</p>
+        <p><strong>Action:</strong> Listened first, clarified goals[cite: 1].</p>
+        <p><strong>Result:</strong> Alignment regained[cite: 1].</p>
+      </div>
+    </div>
   </main>
 
+  <!-- IA INTERFACE -->
   <div id="ai-container">
     <button id="ai-trigger" class="ai-trigger">AI</button>
 
-    <section class="assistant hidden" id="assistant">
+    <div id="assistant" class="assistant hidden">
       <div class="assistant-header">
-        <div class="assistant-avatar"></div>
-        <div class="header-info">
-          <h3>GiFlow AI</h3>
-          <p>Contextual Prep</p>
-        </div>
-        <button id="close-ai" class="close-btn">&times;</button>
+        <strong>GiFlow AI</strong>
+        <span id="close-ai" style="cursor:pointer">&times;</span>
       </div>
       <div class="assistant-modes">
-        <button class="mode-btn active" data-mode="bilingual">Bilingual</button>
-        <button class="mode-btn" data-mode="english">English</button>
-        <button class="mode-btn" data-mode="portuguese">Português</button>
-        <button class="mode-btn" data-mode="translate">Translate</button>
+        <button class="mode-btn active">Bilingual</button>
+        <button class="mode-btn">English</button>
+        <button class="mode-btn">Português</button>
+        <button class="mode-btn">Translate</button>
       </div>
-      <div class="assistant-messages" id="chat-messages">
-        <div class="bot-message">Ask me about leadership, conflict, or STAR answers. Ready to prep!</div>
+      <div class="chat-area">
+        Olá! Como posso ajudar na sua preparação para o Google hoje?[cite: 1]
       </div>
-      <form class="assistant-form" id="chat-form">
-        <input type="text" id="user-input" placeholder="Ask me..." autocomplete="off">
-        <button type="submit">Send</button>
-      </form>
-    </section>
+    </div>
   </div>
 
   <script src="app.js"></script>
