@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GiFlow | AI-Assisted Interview Prep</title>
 
-  <link rel="stylesheet" href="./static/css/styles.css" />
+  <title>GiFlow | AI-Assisted Interview Preparation</title>
+
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -29,10 +30,13 @@
 
   <main>
 
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-content">
         <p class="eyebrow">Personal AI-assisted interview system</p>
+
         <h1>GiFlow</h1>
+
         <h2>Strategic preparation for a Google interview.</h2>
 
         <p class="hero-text">
@@ -48,13 +52,13 @@
       </div>
 
       <div class="hero-card">
-        <div class="profile-wrapper">
-          <img src="./static/images/fotodeperfil.jpeg" class="profile-img" />
+        <div class="profile-photo">
+          <img src="static/images/fotodeperfil.jpeg" alt="Profile">
         </div>
 
         <div class="google-logo">
-          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span>
-          <span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+            class="blue">g</span><span class="green">l</span><span class="red">e</span>
         </div>
 
         <p>
@@ -64,6 +68,7 @@
       </div>
     </section>
 
+    <!-- ABOUT (DETAILS CORRIGIDO) -->
     <section class="section" id="about">
       <p class="section-label">About me</p>
       <h2>Three versions of my personal narrative.</h2>
@@ -103,18 +108,38 @@
       </div>
     </section>
 
-    <section class="section" id="interview-bank">
-      <p class="section-label">Interview bank</p>
-      <h2>Strategic answers for high-impact questions.</h2>
-      <div class="interview-bank-grid" id="interviewBankGrid"></div>
+    <!-- STORIES -->
+    <section class="section" id="stories">
+      <p class="section-label">Core stories</p>
+      <h2>Behavioral examples organized with structure.</h2>
+
+      <div class="stories-grid">
+
+        <article class="story-card">
+          <h3>Leadership</h3>
+          <p><strong>Situation:</strong> Different priorities.</p>
+          <p><strong>Action:</strong> Clarified goals and steps.</p>
+          <p><strong>Result:</strong> Alignment improved.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Conflict</h3>
+          <p><strong>Situation:</strong> Stakeholder disagreement.</p>
+          <p><strong>Action:</strong> Reframed goals.</p>
+          <p><strong>Result:</strong> Alignment restored.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Pressure</h3>
+          <p><strong>Situation:</strong> High workload.</p>
+          <p><strong>Action:</strong> Prioritized tasks.</p>
+          <p><strong>Result:</strong> Maintained quality.</p>
+        </article>
+
+      </div>
     </section>
 
-    <section class="section" id="language-toolkit">
-      <p class="section-label">Language toolkit</p>
-      <h2>Strong phrases and connectors.</h2>
-      <div class="toolkit-grid" id="languageToolkitGrid"></div>
-    </section>
-
+    <!-- DICTIONARY -->
     <section class="section" id="dictionary">
       <p class="section-label">Dictionary</p>
 
@@ -122,9 +147,16 @@
         <div class="dictionary-card">
           <h3>Connectors</h3>
           <ul>
-            <li>First, I would like to give context</li>
-            <li>The main challenge was</li>
             <li>As a result</li>
+            <li>Looking back</li>
+          </ul>
+        </div>
+
+        <div class="dictionary-card">
+          <h3>Leadership</h3>
+          <ul>
+            <li>Ownership</li>
+            <li>Alignment</li>
           </ul>
         </div>
       </div>
@@ -132,10 +164,7 @@
 
   </main>
 
-  <!-- BOTÃO IA -->
-  <button id="ai-trigger" class="ai-trigger">AI</button>
-
-  <!-- IA -->
+  <!-- ASSISTANT -->
   <section class="assistant hidden" id="assistant">
     <div class="assistant-header">
       <div class="assistant-avatar"></div>
@@ -143,28 +172,11 @@
         <h3>GiFlow AI</h3>
         <p>Contextual prep assistant</p>
       </div>
-      <button id="close-ai" class="close-btn">&times;</button>
-    </div>
+     </div>
 
-    <div class="assistant-modes">
-      <button class="mode-btn active">Bilingual</button>
-      <button class="mode-btn">English</button>
-      <button class="mode-btn">Português</button>
-      <button class="mode-btn">Translate</button>
-    </div>
+   </section>
 
-    <div class="assistant-messages">
-      <div class="bot-message">Ready to prep!</div>
-    </div>
-
-    <form class="assistant-form">
-      <input type="text" placeholder="Ask me..." />
-      <button>Send</button>
-    </form>
-  </section>
-
-  <script src="./static/js/app.js"></script>
-
+ 
 </body>
 
-</html>
+</html>S
