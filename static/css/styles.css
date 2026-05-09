@@ -1,316 +1,325 @@
-/* 
-   GiFlow UI/UX Framework 
-   Design: Minimalista, Chic, Autêntico
-   Specialist: Geovana Calixto
-*/
-
 :root {
-  --bg-color: #0b0b0d;
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --accent-purple: #a855f7;
-  --accent-blue: #6366f1;
-  --google-blue: #4285F4;
-  --google-red: #EA4335;
-  --google-yellow: #FBBC05;
-  --google-green: #34A853;
+  --bg: #08070d;
+  --card: rgba(255, 255, 255, 0.08);
+  --card-strong: rgba(255, 255, 255, 0.14);
+  --text: #f7f2ff;
+  --muted: #b9adc9;
+  --purple: #8b5cf6;
+  --orange: #ff8a3d;
+  --line: rgba(255, 255, 255, 0.14);
 }
 
-* {
-  margin: 0;
-  padding: 0;
+ * {
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--bg-color);
-  color: var(--text-primary);
-  line-height: 1.6;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 20% 10%, rgba(139, 92, 246, 0.32), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(255, 138, 61, 0.22), transparent 24%),
+    linear-gradient(135deg, #08070d, #11101a 50%, #08070d);
 }
 
-/* --- TOPBAR --- */
+/* TOPBAR FIEL AO ORIGINAL */
 .topbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  z-index: 20;
+  width: min(1120px, calc(100% - 32px));
+  transform: translateX(-50%);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  position: sticky;
-  top: 0;
-  background: rgba(11, 11, 13, 0.8);
-  backdrop-filter: blur(10px);
-  z-index: 100;
-  border-bottom: 1px solid var(--glass-border);
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(8, 7, 13, 0.72);
+  backdrop-filter: blur(18px);
 }
 
 .brand {
   display: flex;
-  align-items: center;
   gap: 10px;
-  font-weight: 600;
-  font-size: 1.2rem;
+  align-items: center;
+  font-weight: 800;
 }
 
 .brand-icon {
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--purple), var(--orange));
+  box-shadow: 0 0 28px rgba(139, 92, 246, 0.7);
+  font-weight: 800;
 }
 
-.nav a {
-  color: var(--text-secondary);
-  text-decoration: none;
-  margin-left: 2rem;
-  font-size: 0.9rem;
-  transition: color 0.3s;
+.nav {
+  display: flex;
+  gap: 14px;
+  color: var(--muted);
+  font-size: 13px;
 }
 
 .nav a:hover {
-  color: var(--text-primary);
+  color: var(--text);
 }
 
-/* --- HERO SECTION --- */
+/* HERO E SEÇÕES */
 .hero {
+  min-height: 100vh;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 140px 0 80px;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
-  gap: 4rem;
-  padding: 5rem 5%;
+  gap: 40px;
   align-items: center;
 }
 
-.eyebrow {
-  color: var(--accent-purple);
+.section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(64px, 11vw, 140px);
+  line-height: 0.9;
+}
+
+.eyebrow,
+.section-label {
+  color: var(--orange);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-size: 13px;
+  font-weight: 800;
 }
 
-h1 { font-size: 4rem; margin-bottom: 1rem; }
-h2 { font-size: 1.5rem; color: var(--text-secondary); margin-bottom: 2rem; }
-
-.hero-text {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  max-width: 500px;
-  margin-bottom: 2rem;
+/* GRID SYSTEM */
+.about-grid,
+.stories-grid,
+.dictionary-grid,
+.toolkit-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.hero-tags {
-  display: flex;
-  gap: 10px;
+.interview-bank-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-.hero-tags span {
-  padding: 5px 15px;
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+/* CARDS */
+.hero-card,
+.glass-card,
+.story-card,
+.dictionary-card,
+.bank-card,
+.toolkit-card,
+.assistant {
+  border: 1px solid var(--line);
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  border-radius: 18px;
+  padding: 22px;
 }
 
 .hero-card {
-  background: var(--card-bg);
-  border: 1px solid var(--glass-border);
-  padding: 2.5rem;
   border-radius: 24px;
-  text-align: center;
-}
-
-.profile-photo {
-  width: 120px;
-  height: 120px;
-  margin: 0 auto 1.5rem;
-  border-radius: 50%;
-  border: 2px solid var(--accent-purple);
+  position: relative;
   overflow: hidden;
 }
 
-.google-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 34px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.9), rgba(255, 138, 61, 0.9));
+  box-shadow: 0 0 50px rgba(139, 92, 246, 0.55);
 }
 
-.google-logo .blue { color: var(--google-blue); }
-.google-logo .red { color: var(--google-red); }
-.google-logo .yellow { color: var(--google-yellow); }
-.google-logo .green { color: var(--google-green); }
-
-/* --- SECTIONS & GRIDS --- */
-.section { padding: 4rem 5%; }
-.section-label {
-  color: var(--text-secondary);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.glass-card, .story-card, .bank-card, .toolkit-card {
-  background: var(--card-bg);
-  border: 1px solid var(--glass-border);
-  padding: 2rem;
-  border-radius: 16px;
-  transition: transform 0.3s;
-}
-
-.about-grid, .stories-grid, .interview-bank-grid, .toolkit-grid, .dictionary-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-/* --- WIDGET IA (CORREÇÃO MOBILE & DESKTOP) --- */
-
-/* Botão Flutuante */
+/* WIDGET IA - MANTENDO SUA IDENTIDADE */
 .chat-trigger {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  right: 24px;
+  bottom: 24px;
   width: 60px;
   height: 60px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
-  color: white;
+  border-radius: 16px;
+  /* Combinando com brand-icon */
+  background: linear-gradient(135deg, var(--purple), var(--orange));
   border: none;
-  font-size: 1.5rem;
-  font-weight: bold;
   cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 0 28px rgba(139, 92, 246, 0.5);
+  transition: transform 0.3s ease;
 }
 
-/* Janela do Assistente */
+.chat-trigger:hover {
+  transform: scale(1.05);
+}
+
 .assistant {
   position: fixed;
-  bottom: 100px;
-  right: 30px;
-  width: 380px;
-  max-width: 90vw;
+  right: 24px;
+  bottom: 95px;
+  z-index: 99;
+  width: min(380px, calc(100% - 32px));
   height: 600px;
-  max-height: 70vh;
-  background: rgba(15, 15, 20, 0.95);
-  backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  border-radius: 24px;
   display: flex;
   flex-direction: column;
-  z-index: 999;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-  transition: all 0.3s ease;
+  padding: 0;
+  /* Header e form cuidam do padding */
+  overflow: hidden;
 }
 
-.assistant.chat-closed {
-  display: none !important;
+.assistant.hidden {
+  display: none;
 }
 
 .assistant-header {
-  padding: 1.5rem;
-  background: rgba(255,255,255,0.03);
   display: flex;
-  align-items: center;
   gap: 12px;
-  border-bottom: 1px solid var(--glass-border);
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--line);
 }
 
 .assistant-avatar {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--accent-purple), var(--accent-blue));
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-}
-
-.close-btn {
-  margin-left: auto;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+  background: radial-gradient(circle, var(--orange), var(--purple));
 }
 
 .assistant-modes {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  padding: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
 }
 
 .mode-btn {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--glass-border);
-  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  color: var(--muted);
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 11px;
+  font-weight: 800;
 }
 
 .mode-btn.active {
-  background: var(--accent-purple);
+  background: linear-gradient(135deg, var(--purple), var(--orange));
   color: white;
+  border: none;
 }
 
 .assistant-messages {
   flex: 1;
   overflow-y: auto;
-  padding: 1rem;
+  padding: 16px;
 }
 
-.bot-message, .user-message {
-  margin-bottom: 1rem;
-  padding: 1rem;
+.bot-message {
+  background: rgba(139, 92, 246, 0.14);
+  padding: 12px;
   border-radius: 12px;
-  font-size: 0.9rem;
+  margin-bottom: 10px;
+  color: var(--muted);
 }
-
-.bot-message { background: rgba(255,255,255,0.05); border-left: 3px solid var(--accent-purple); }
-.user-message { background: var(--accent-blue); align-self: flex-end; }
 
 .assistant-form {
-  padding: 1rem;
   display: flex;
-  gap: 10px;
-  border-top: 1px solid var(--glass-border);
+  gap: 8px;
+  padding: 16px;
+  border-top: 1px solid var(--line);
 }
 
 .assistant-form input {
   flex: 1;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid var(--glass-border);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--line);
   border-radius: 10px;
-  padding: 10px;
   color: white;
+  padding: 0 12px;
+  outline: none;
 }
 
 .assistant-form button {
-  background: var(--accent-purple);
+  background: linear-gradient(135deg, var(--purple), var(--orange));
   border: none;
-  padding: 10px 20px;
   border-radius: 10px;
+  padding: 0 15px;
   color: white;
-  font-weight: 600;
+  font-weight: 800;
   cursor: pointer;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media (max-width: 768px) {
-  .hero { grid-template-columns: 1fr; text-align: center; }
-  .hero-text { margin: 0 auto 2rem; }
-  .hero-tags { justify-content: center; }
-  h1 { font-size: 2.5rem; }
-  .nav { display: none; } /* Pode ser trocado por menu hambúrguer */
-  .assistant { right: 5%; width: 90%; bottom: 90px; }
+/* RESPONSIVIDADE (Ajustando a Grid para Mobile) */
+@media (max-width: 1000px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 180px;
+    text-align: center;
+  }
+
+  .hero-content {
+    order: 2;
+  }
+
+  .hero-card {
+    order: 1;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-grid,
+  .stories-grid,
+  .dictionary-grid,
+  .toolkit-grid,
+  .interview-bank-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    padding: 10px;
+  }
+
+  .nav {
+    gap: 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 640px) {
+  .assistant {
+    width: calc(100% - 32px);
+    right: 16px;
+    bottom: 90px;
+    height: 70vh;
+  }
+
+  .assistant-modes {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
