@@ -1,9 +1,9 @@
 // GiFlow AI - Versão Estática para GitHub Pages
 // Desenvolvido por Geovana Calixto | UI/UX Specialist
 
-const form = document.querySelector(".assistant-form");
-const input = document.querySelector(".assistant-form input");
-const messages = document.querySelector(".assistant-messages");
+const form = document.querySelector("#chat-form"); // Ajustado para o ID do seu HTML
+const input = document.querySelector("#user-input"); // Ajustado para o ID do seu HTML
+const messages = document.querySelector("#chat-messages"); // Ajustado para o ID do seu HTML
 const modeButtons = document.querySelectorAll(".mode-btn");
 const interviewBankGrid = document.querySelector("#interviewBankGrid");
 const languageToolkitGrid = document.querySelector("#languageToolkitGrid");
@@ -11,7 +11,7 @@ const languageToolkitGrid = document.querySelector("#languageToolkitGrid");
 let currentMode = "bilingual";
 let globalData = {}; // Armazena os JSONs carregados
 
-// 1. UTILITÁRIOS (Traduzidos do seu app.py)
+// 1. UTILITÁRIOS
 function normalizeText(text) {
   if (!text) return "";
   return text.toLowerCase()
@@ -56,7 +56,7 @@ function addLoadingMessage() {
   return message;
 }
 
-// 3. CRIAÇÃO DINÂMICA DE CARDS (Seu código original)
+// 3. CRIAÇÃO DINÂMICA DE CARDS
 function createBankCard(key, item) {
   const card = document.createElement("article");
   card.classList.add("bank-card");
@@ -84,7 +84,7 @@ function createToolkitCard(title, items, fields) {
   return card;
 }
 
-// 4. LÓGICA DO ASSISTENTE (O coração do app.py convertido)
+// 4. LÓGICA DO ASSISTENTE
 function getAIResponse(userText, mode) {
   const msg = normalizeText(userText);
 
@@ -101,11 +101,14 @@ function getAIResponse(userText, mode) {
 
   // Interview Bank Match
   let bestBank = null; let bestScore = 0;
-  Object.values(globalData.interview_bank).forEach(item => {
-    let s = scoreMatch(msg, item.keywords || []);
-    if (s > bestScore) { bestBank = item; bestScore = s; }
-  });
-  if (bestBank) {
+  if (globalData.interview_bank) {
+    Object.values(globalData.interview_bank).forEach(item => {
+      let s = scoreMatch(msg, item.keywords || []);
+      if (s > bestScore) { bestBank = item; bestScore = s; }
+    });
+  }
+
+  if (bestBank && bestScore > 0) {
     return {
       title: "Interview Answer",
       answer: mode === "portuguese" ? bestBank.portuguese : bestBank.english,
@@ -115,11 +118,14 @@ function getAIResponse(userText, mode) {
 
   // Stories Match
   let bestStory = null; let sScore = 0;
-  globalData.stories.forEach(story => {
-    let s = scoreMatch(msg, story.keywords || []);
-    if (s > sScore) { bestStory = story; sScore = s; }
-  });
-  if (bestStory) {
+  if (globalData.stories) {
+    globalData.stories.forEach(story => {
+      let s = scoreMatch(msg, story.keywords || []);
+      if (s > sScore) { bestStory = story; sScore = s; }
+    });
+  }
+
+  if (bestStory && sScore > 0) {
     return {
       title: `Story match: ${bestStory.title}`,
       answer: `Situation: ${bestStory.situation}\nAction: ${bestStory.action}\nResult: ${bestStory.result}`,
@@ -144,14 +150,14 @@ async function loadPageContent() {
     }
 
     // Popular Grids
-    if (interviewBankGrid) {
+    if (interviewBankGrid && globalData.interview_bank) {
       interviewBankGrid.innerHTML = "";
       Object.entries(globalData.interview_bank).forEach(([key, item]) => {
         interviewBankGrid.appendChild(createBankCard(key, item));
       });
     }
 
-    if (languageToolkitGrid) {
+    if (languageToolkitGrid && globalData.language_support) {
       const lang = globalData.language_support;
       languageToolkitGrid.innerHTML = "";
       languageToolkitGrid.appendChild(createToolkitCard("Connectives", lang.connectives, ["term", "translation"]));
@@ -170,22 +176,23 @@ modeButtons.forEach(btn => {
   });
 });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const text = input.value.trim();
-  if (!text) return;
+if (form) {
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text) return;
 
-  addMessage("user", "You", text);
-  input.value = "";
+    addMessage("user", "You", text);
+    input.value = "";
 
-  const loading = addLoadingMessage();
-  setTimeout(() => {
-    loading.remove();
-    const response = getAIResponse(text, currentMode);
-    addMessage("bot", response.title, response.answer, response.tips);
-  }, 600);
-});
-
+    const loading = addLoadingMessage();
+    setTimeout(() => {
+      loading.remove();
+      const response = getAIResponse(text, currentMode);
+      addMessage("bot", response.title, response.answer, response.tips);
+    }, 600);
+  });
+}
 
 loadPageContent();
 

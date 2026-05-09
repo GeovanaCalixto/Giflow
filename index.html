@@ -4,10 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>GiFlow | AI-Assisted Interview Preparation</title>
-  <!-- Caminhos ajustados para o GitHub Pages -->
-  <link rel="icon" type="image/png" href="static/images/favicon.png" />
+
+  <!-- Caminho corrigido para GitHub Pages -->
   <link rel="stylesheet" href="static/css/styles.css" />
 </head>
 
@@ -46,74 +45,176 @@
         </div>
       </div>
 
-      <div class="profile-photo">
-        <!-- Caminho da imagem ajustado -->
-        <img src="/static/images/fotodeperfil.jpeg" alt="Profile photo" />
-      </div>
+      <div class="hero-card">
+        <div class="profile-photo">
+          <!-- Coloquei o caminho da sua foto aqui -->
+          <img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto"
+            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+        </div>
 
-      <div class="google-logo">
-        <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
-          class="blue">g</span><span class="green">l</span><span class="red">e</span>
-      </div>
+        <div class="google-logo">
+          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
+            class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
 
-      <p>
-        A personal operating system for communication, behavioral stories,
-        vocabulary, and interview readiness.
-      </p>
+        <p>
+          A personal operating system for communication, behavioral stories,
+          vocabulary, and interview readiness.
+        </p>
+      </div>
     </section>
-
-    <!-- ... (restante das seções permanecem iguais) ... -->
 
     <section class="section" id="about">
       <p class="section-label">About me</p>
       <h2>Three versions of my personal narrative.</h2>
+
       <div class="about-grid">
         <article class="glass-card">
           <h3>Short version</h3>
-          <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset.</p>
+          <p>
+            I am a marketing-driven builder with startup energy, social impact experience,
+            and a growth mindset focused on learning fast and communicating clearly.
+          </p>
         </article>
-        <!-- Adicione as outras versões aqui conforme seu original -->
+
+        <article class="glass-card">
+          <h3>Medium version</h3>
+          <p>
+            My background connects marketing, leadership, volunteering, startup environments,
+            and an MBA in Web3. I like turning ambiguity into structure and using technology
+            to learn faster.
+          </p>
+        </article>
+
+        <article class="glass-card">
+          <h3>Long version</h3>
+          <p>
+            I see career development as an operating system: goals, feedback loops, practice,
+            vocabulary, stories, and reflection. GiFlow translates that mindset into a practical
+            preparation environment.
+          </p>
+        </article>
       </div>
     </section>
 
-    <!-- SEÇÕES CARREGADAS POR JS -->
+    <section class="section" id="stories">
+      <p class="section-label">Core stories</p>
+      <h2>Behavioral examples organized with structure.</h2>
+
+      <div class="stories-grid">
+        <article class="story-card">
+          <h3>Leadership</h3>
+          <p><strong>Situation:</strong> Different people had different priorities and communication styles.</p>
+          <p><strong>Challenge:</strong> Create alignment without relying only on authority.</p>
+          <p><strong>Action:</strong> I listened first, clarified goals, and broke the problem into next steps.</p>
+          <p><strong>Result:</strong> The team moved with more clarity and ownership.</p>
+          <p><strong>Reflection:</strong> Leadership is about direction, trust, and momentum.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Conflict Resolution</h3>
+          <p><strong>Situation:</strong> Stakeholders had different expectations about priorities.</p>
+          <p><strong>Challenge:</strong> Avoid losing time, trust, and focus.</p>
+          <p><strong>Action:</strong> I reframed the conversation around shared goals.</p>
+          <p><strong>Result:</strong> The team regained alignment.</p>
+          <p><strong>Reflection:</strong> Conflict often means context is missing.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Pressure</h3>
+          <p><strong>Situation:</strong> I had multiple responsibilities during intense periods.</p>
+          <p><strong>Challenge:</strong> Stay focused without trying to solve everything at once.</p>
+          <p><strong>Action:</strong> I prioritized high-impact tasks and created a simple rhythm.</p>
+          <p><strong>Result:</strong> I protected quality and kept improving.</p>
+          <p><strong>Reflection:</strong> Pressure teaches simplification and communication.</p>
+        </article>
+      </div>
+    </section>
+
     <section class="section" id="interview-bank">
       <p class="section-label">Interview bank</p>
-      <div class="interview-bank-grid" id="interviewBankGrid"></div>
+      <h2>Strategic answers for high-impact interview questions.</h2>
+      <div class="interview-bank-grid" id="interviewBankGrid">
+        <!-- Loaded by JavaScript -->
+      </div>
     </section>
 
     <section class="section" id="language-toolkit">
       <p class="section-label">Language toolkit</p>
-      <div class="toolkit-grid" id="languageToolkitGrid"></div>
+      <h2>Connectives, strong verbs, and phrases that help under pressure.</h2>
+      <div class="toolkit-grid" id="languageToolkitGrid">
+        <!-- Loaded by JavaScript -->
+      </div>
     </section>
 
-    <!-- ASSISTENTE AI -->
-    <section class="assistant" id="assistant">
-      <div class="assistant-header">
-        <div class="assistant-avatar"></div>
-        <div>
-          <h3>GiFlow AI</h3>
-          <p>Contextual prep assistant</p>
+    <section class="section" id="dictionary">
+      <p class="section-label">Interview dictionary</p>
+      <h2>Vocabulary and phrases for fluency.</h2>
+
+      <div class="dictionary-grid">
+        <div class="dictionary-card">
+          <h3>Connectors</h3>
+          <ul>
+            <li>First, I would like to give some context</li>
+            <li>The main challenge was</li>
+            <li>As a result</li>
+            <li>Looking back</li>
+          </ul>
+        </div>
+
+        <div class="dictionary-card">
+          <h3>Leadership vocabulary</h3>
+          <ul>
+            <li>Ownership</li>
+            <li>Alignment</li>
+            <li>Hands-on approach</li>
+            <li>Adaptability</li>
+          </ul>
+        </div>
+
+        <div class="dictionary-card">
+          <h3>Fluency support</h3>
+          <ul>
+            <li>Let me rephrase that</li>
+            <li>What I mean is</li>
+            <li>The key point is</li>
+            <li>To make it more concrete</li>
+          </ul>
         </div>
       </div>
-      <div class="assistant-modes">
-        <button type="button" class="mode-btn active" data-mode="bilingual">Bilingual</button>
-        <button type="button" class="mode-btn" data-mode="english">English</button>
-        <button type="button" class="mode-btn" data-mode="portuguese">Português</button>
-        <button type="button" class="mode-btn" data-mode="translate">Translate</button>
-      </div>
-      <div class="assistant-messages" id="chat-messages">
-        <div class="bot-message">Ask me about leadership, conflict, pressure, vocabulary, or STAR answers.</div>
-      </div>
-      <form class="assistant-form" id="chat-form">
-        <input type="text" id="user-input" placeholder="Tell me about leadership" />
-        <button type="submit">Send</button>
-      </form>
     </section>
   </main>
 
-  <!-- Script ajustado -->
-  <script src="/static/js/app.js"></script>
+  <section class="assistant" id="assistant">
+    <div class="assistant-header">
+      <div class="assistant-avatar"></div>
+      <div>
+        <h3>GiFlow AI</h3>
+        <p>Contextual prep assistant</p>
+      </div>
+    </div>
+
+    <div class="assistant-modes">
+      <button type="button" class="mode-btn active" data-mode="bilingual">Bilingual</button>
+      <button type="button" class="mode-btn" data-mode="english">English</button>
+      <button type="button" class="mode-btn" data-mode="portuguese">Português</button>
+      <button type="button" class="mode-btn" data-mode="translate">Translate</button>
+    </div>
+
+    <div class="assistant-messages" id="chat-messages">
+      <div class="bot-message">
+        Ask me about leadership, conflict, pressure, vocabulary, or STAR answers.
+      </div>
+    </div>
+
+    <form class="assistant-form" id="chat-form">
+      <input type="text" id="user-input" placeholder="Tell me about leadership" />
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Script corrigido para GitHub Pages -->
+  <script src="static/js/app.js"></script>
 </body>
 
 </html>
