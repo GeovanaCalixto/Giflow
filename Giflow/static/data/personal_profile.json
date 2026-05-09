@@ -1,0 +1,125 @@
+{
+  "project_name": "GiFlow",
+  "positioning": {
+    "main_idea": "When I do not fully master something yet, I build intelligent systems to accelerate my evolution.",
+    "project_purpose": "GiFlow is a personal AI-assisted preparation system created to organize communication, storytelling, vocabulary, behavioral interview practice, and accelerated learning for a Google interview.",
+    "important_message": "This project does not exist to hide limitations. It exists to demonstrate structured thinking, creativity, adaptability, growth mindset, and the strategic use of technology for learning and performance."
+  },
+  "introduction": {
+    "short": "I am a marketing professional with experience in startups, social impact projects, leadership, and emerging technologies. I enjoy solving problems, building structured solutions, and continuously improving.",
+    "medium": "I graduated in 2024 and have been working in marketing since 2022. My background includes freelance marketing projects, experience in a traditional biochemical company, growth in a tech startup, leadership responsibilities as a Marketing Analyst, and social impact work as a Social Media Coordinator for a non-profit organization.",
+    "long": "Thank you so much for considering me for this position. I was pleasantly surprised to receive the invitation, especially following my first contact with Google last year. Participating in this process is a very exciting opportunity for me, and I would like to take a moment to introduce myself in more detail. I graduated in 2024, but I have been working in marketing since 2022, so I have about four to five years of experience in the field. One thing I want to bring to this conversation is my personality: how I handle situations and how I challenge myself. I do not believe in a perfect professional, but I do believe in one who is always improving. For example, my English is still a work in progress. Because of that, I decided to approach this interview the same way I approach strategic projects: by building systems that help me learn, organize information, and communicate more effectively under pressure. So I actually created a small AI-assisted preparation ecosystem for this interview. Not to hide my limitations, but to maximize my learning process and demonstrate how I think. Talking a bit about my background: in 2022, I started my first marketing project as a freelancer. I worked with an engineering company through an agency in Sao Paulo, but the project was based in Minas Gerais. I contributed to inbound and outbound marketing, creating campaigns to increase visibility and engagement. This was a turning point for me because it was my start in the industry, even before college. After that, I gained experience in a traditional biochemical company and later joined a tech startup, where I grew significantly. I went from an intern to a Marketing Analyst and took on leadership responsibilities, managing projects and supporting the team. I worked with branding, social media, events, and strategic planning always aligned with business goals. Later, I went through a period of re-evaluating my career and looking for new challenges. That is when I decided to work on a social project where I found a strong sense of purpose. I served as a Social Media Coordinator for a non-profit, leading nineteen volunteers and helping restructure their communication processes and marketing strategy. It was a challenging experience because the organization was undergoing a complete restructure. I delivered solutions, organized workflows, and created new processes. I see myself as someone who truly enjoys solving problems and building solutions. After graduation, I also completed an MBA focused on Web 3.0 and emerging technologies, where I developed a foundational understanding of HTML, CSS, and some Python.",
+    "portuguese_short": "Sou um profissional de marketing com experiência em startups, projetos de impacto social, liderança e tecnologias emergentes. Gosto de resolver problemas, construir soluções estruturadas e melhorar continuamente.",
+    "portuguese_medium": "Eu me formei em 2024 e trabalho com marketing desde 2022. Minha trajetória inclui projetos freelancer em marketing, experiência em uma empresa tradicional do setor bioquímico, crescimento em uma startup de tecnologia, responsabilidades de liderança como Marketing Analyst e atuação em impacto social como Social Media Coordinator em uma organização sem fins lucrativos.",
+    "portuguese_long": "Muito obrigado por me considerar para esta posição. Eu fiquei muito positivamente surpreso ao receber o convite, especialmente depois do meu primeiro contato com o Google no ano passado. Participar deste processo é uma oportunidade muito empolgante para mim, e eu gostaria de dedicar um momento para me apresentar com mais detalhes. Eu me formei em 2024, mas trabalho com marketing desde 2022, então tenho cerca de quatro a cinco anos de experiência na área. Uma coisa que eu quero trazer para esta conversa é a minha personalidade: como eu lido com situações e como eu me desafio. Eu não acredito em um profissional perfeito, mas acredito em um profissional que está sempre melhorando. Por exemplo, meu inglês ainda está em desenvolvimento. Por causa disso, decidi abordar esta entrevista da mesma forma que abordo projetos estratégicos: construindo sistemas que me ajudam a aprender, organizar informações e me comunicar de forma mais eficaz sob pressão. Então eu criei um pequeno ecossistema de preparação assistido por IA para esta entrevista. Não para esconder minhas limitações, mas para maximizar meu processo de aprendizado e demonstrar como eu penso. Falando um pouco sobre a minha trajetória: em 2022, comecei meu primeiro projeto de marketing como freelancer. Trabalhei com uma empresa de engenharia por meio de uma agência em São Paulo, mas o projeto era baseado em Minas Gerais. Contribuí com marketing inbound e outbound, criando campanhas para aumentar visibilidade e engajamento. Esse foi um ponto de virada para mim, porque marcou meu início na área, mesmo antes da faculdade. Depois disso, ganhei experiência em uma empresa tradicional do setor bioquímico e, mais tarde, entrei em uma startup de tecnologia, onde cresci significativamente. Passei de estagiário a Marketing Analyst e assumi responsabilidades de liderança, gerenciando projetos e apoiando a equipe. Trabalhei com branding, redes sociais, eventos e planejamento estratégico, sempre alinhado aos objetivos de negócio. Mais tarde, passei por um período de reavaliação da minha carreira e busca por novos desafios. Foi quando decidi atuar em um projeto social, onde encontrei um forte senso de propósito. Atuei como Social Media Coordinator em uma organização sem fins lucrativos, liderando dezenove voluntários e ajudando a reestruturar seus processos de comunicação e sua estratégia de marketing. Foi uma experiência desafiadora, porque a organização estava passando por uma reestruturação completa. Eu entreguei soluções, organizei fluxos de trabalho e criei novos processos. Eu me vejo como alguém que realmente gosta de resolver problemas e construir soluções. Depois da graduação, também concluí um MBA focado em Web 3.0 e tecnologias emergentes, onde desenvolvi uma compreensão inicial de HTML, CSS e um pouco de Python."
+  },
+  "career_timeline": [
+    {
+      "period": "2022",
+      "title": "First marketing project as a freelancer",
+      "description": "In 2022, I started my first marketing project as a freelancer. I worked with an engineering company through an agency in Sao Paulo, while the project itself was based in Minas Gerais.",
+      "responsibilities": [
+        "Inbound marketing",
+        "Outbound marketing",
+        "Campaign creation",
+        "Visibility and engagement initiatives"
+      ],
+      "learning": "This was a turning point because it marked my start in the industry, even before college."
+    },
+    {
+      "period": "After 2022",
+      "title": "Experience in a traditional biochemical company",
+      "description": "After my first marketing project, I gained experience in a traditional biochemical company.",
+      "responsibilities": [
+        "Marketing support",
+        "Communication routines",
+        "Business environment learning"
+      ],
+      "learning": "This experience helped me understand how marketing operates in a more traditional company structure."
+    },
+    {
+      "period": "Startup experience",
+      "title": "Growth in a tech startup",
+      "description": "Later, I joined a tech startup where I grew significantly. I went from intern to Marketing Analyst and took on leadership responsibilities.",
+      "responsibilities": [
+        "Branding",
+        "Social media",
+        "Events",
+        "Strategic planning",
+        "Project management",
+        "Team support"
+      ],
+      "learning": "I learned how to connect marketing execution with business goals in a fast-changing environment."
+    },
+    {
+      "period": "Career reevaluation",
+      "title": "Social project and non-profit leadership",
+      "description": "Later, I went through a period of re-evaluating my career and looking for new challenges. That was when I decided to work on a social project where I found a strong sense of purpose.",
+      "responsibilities": [
+        "Social Media Coordinator",
+        "Leadership of nineteen volunteers",
+        "Communication process restructuring",
+        "Marketing strategy restructuring",
+        "Workflow organization",
+        "Creation of new processes"
+      ],
+      "learning": "This was a challenging experience because the organization was undergoing a complete restructure. I delivered solutions, organized workflows, and helped create new processes."
+    },
+    {
+      "period": "After graduation",
+      "title": "MBA in Web 3.0 and emerging technologies",
+      "description": "After graduation, I completed an MBA focused on Web 3.0 and emerging technologies.",
+      "responsibilities": [
+        "Studied Web3 concepts",
+        "Developed a foundational understanding of HTML",
+        "Developed a foundational understanding of CSS",
+        "Developed a foundational understanding of Python"
+      ],
+      "learning": "I chose Web3 because I realized that traditional digital marketing is reaching a plateau. I wanted to understand how decentralization and digital ownership can create new layers of value."
+    }
+  ],
+  "strengths": [
+    {
+      "name": "Hard-working",
+      "description": "My big strength is that I am a hard-working person. I focus on delivery and problem resolution."
+    },
+    {
+      "name": "Problem solver",
+      "description": "I see myself as someone who truly enjoys solving problems and building solutions."
+    },
+    {
+      "name": "Creative",
+      "description": "I use creativity to connect ideas, structure solutions, and adapt to different contexts."
+    },
+    {
+      "name": "Reliable",
+      "description": "I value consistency, responsibility, and commitment to delivery."
+    },
+    {
+      "name": "Clear purpose",
+      "description": "One of my biggest strengths is having a clear purpose, because it guides what I do."
+    }
+  ],
+  "development_points": [
+    {
+      "name": "English development",
+      "description": "My English is still a work in progress, but that does not stop me from using it, practicing it, and pursuing fluency.",
+      "strategy": "I use tools, structured preparation, repetition, and AI-assisted workflows to improve communication and confidence."
+    },
+    {
+      "name": "Information overload",
+      "description": "Working in a fast-changing market, I sometimes feel that I never know enough.",
+      "strategy": "I created a curation filter. I integrated learning into my daily life, such as reading during breakfast, and learned to distinguish between essential information and noise."
+    },
+    {
+      "name": "Problem-solver instinct",
+      "description": "My natural reaction when I see someone struggling is to step in and take over.",
+      "strategy": "I learned to manage this by considering project timelines. For short-term projects, I assign people who already have the needed skills. For longer deadlines, I assign people who need to develop that competency, giving them space to grow through feedback."
+    }
+  ],
+  "google_narrative": {
+    "why_this_opportunity_matters": "Participating in this process is exciting because it represents a chance to connect my background in marketing, technology, social impact, and continuous learning with a company known for scale, innovation, and impact.",
+    "what_i_want_to_show": "I want to show not only my technical or professional background, but also how I think, how I learn, how I organize myself, and how I transform limitations into systems for growth.",
+    "core_message": "I do not believe in a perfect professional. I believe in a professional who keeps improving, learns intentionally, and builds solutions with the tools available."
+  }
+}

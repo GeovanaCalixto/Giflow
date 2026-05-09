@@ -1,0 +1,68 @@
+[
+  {
+    "id": "leadership",
+    "title": "Leadership Through Alignment",
+    "theme": "Leadership",
+    "keywords": ["leadership", "leader", "lead", "team", "alignment", "people", "lideranca", "lider", "equipe", "alinhamento", "pessoas"],
+    "situation": "I worked in environments where people had different priorities, levels of experience, and communication styles.",
+    "challenge": "The challenge was to create alignment without relying only on authority or formal structure.",
+    "action": "I focused on listening first, clarifying goals, breaking the problem into concrete next steps, and helping each person understand how their contribution connected to the bigger outcome.",
+    "result": "The team moved with more clarity, reduced friction, and delivered with stronger ownership.",
+    "reflection": "Leadership for me is not about having all the answers. It is about creating direction, trust, and momentum."
+  },
+  {
+    "id": "conflict",
+    "title": "Resolving Conflict With Clarity",
+    "theme": "Conflict Resolution",
+    "keywords": ["conflict", "disagreement", "tension", "feedback", "alignment", "conflito", "desacordo", "tensao", "alinhamento"],
+    "situation": "In a fast-moving project, different stakeholders had different expectations about priorities and execution.",
+    "challenge": "If the conflict stayed implicit, the team could lose time, trust, and focus.",
+    "action": "I reframed the conversation around shared goals, made assumptions explicit, and proposed a practical path where everyone could see the trade-offs.",
+    "result": "The conversation became more objective, the team regained alignment, and execution became smoother.",
+    "reflection": "I learned that conflict is often a signal that context is missing. My role is to bring structure to the conversation."
+  },
+  {
+    "id": "pressure",
+    "title": "Performing Under Pressure",
+    "theme": "Pressure",
+    "keywords": ["pressure", "deadline", "stress", "priority", "execution", "pressao", "prazo", "estresse", "prioridade", "execucao"],
+    "situation": "During intense periods with multiple responsibilities, I had to keep performance high while learning quickly.",
+    "challenge": "The risk was trying to solve everything at once and losing focus.",
+    "action": "I prioritized the highest-impact tasks, created a simple operating rhythm, and used feedback loops to adjust quickly.",
+    "result": "I stayed organized, protected quality, and kept improving even under pressure.",
+    "reflection": "Pressure taught me to simplify, communicate early, and focus on controllable actions."
+  },
+  {
+    "id": "fipan",
+    "title": "FIPAN: Learning From the Market",
+    "theme": "FIPAN",
+    "keywords": ["fipan", "event", "market", "customer", "networking"],
+    "situation": "At FIPAN, I had direct exposure to brands, professionals, customers, and market dynamics.",
+    "challenge": "The opportunity was to convert a busy event environment into useful insight and relationships.",
+    "action": "I observed patterns, asked better questions, connected business goals with customer behavior, and translated what I learned into practical thinking.",
+    "result": "I developed stronger market awareness and a more strategic view of communication and positioning.",
+    "reflection": "The experience reinforced that learning happens faster when I combine observation, curiosity, and action."
+  },
+  {
+    "id": "volunteering",
+    "title": "Volunteering and Human-Centered Leadership",
+    "theme": "Volunteering",
+    "keywords": ["volunteer", "volunteering", "ngo", "ong", "community", "impact", "voluntariado", "voluntario", "comunidade", "impacto"],
+    "situation": "In NGO and volunteering contexts, resources were limited and human impact mattered deeply.",
+    "challenge": "The challenge was to create value with constraints while respecting people, context, and urgency.",
+    "action": "I contributed with organization, communication, empathy, and a hands-on approach to support shared goals.",
+    "result": "The work strengthened my sense of responsibility, adaptability, and service-oriented leadership.",
+    "reflection": "Volunteering taught me that meaningful work requires both empathy and execution."
+  },
+  {
+    "id": "startup",
+    "title": "Startup Mindset and Adaptability",
+    "theme": "Startup",
+    "keywords": ["startup", "adaptability", "growth", "experiment", "innovation", "adaptabilidade", "crescimento", "experimento", "inovacao"],
+    "situation": "In startup-related experiences, ambiguity was part of the environment.",
+    "challenge": "The challenge was to move forward without perfect information while still making thoughtful decisions.",
+    "action": "I used experimentation, fast learning, and structured reflection to test ideas and improve execution.",
+    "result": "I became more comfortable with uncertainty and more disciplined about turning learning into action.",
+    "reflection": "A startup mindset means being resourceful, adaptable, and honest about what needs to improve."
+  }
+]

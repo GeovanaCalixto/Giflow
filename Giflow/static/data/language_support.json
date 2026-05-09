@@ -1,0 +1,262 @@
+{
+    "connectives": [
+        {
+            "term": "First of all",
+            "translation": "Primeiro de tudo",
+            "use": "Use when you want to start a line of reasoning.",
+            "example": "First of all, I focused on understanding the problem.",
+            "example_translation": "Primeiramente, eu foquei em entender o problema.",
+            "mindset": "I am starting my line of thought."
+        },
+        {
+            "term": "At that moment",
+            "translation": "Naquele momento",
+            "use": "Very useful for storytelling because it creates context, tension, and narrative.",
+            "example": "At that moment, we realized the project was at risk.",
+            "example_translation": "Naquele momento, percebemos que o projeto estava em risco.",
+            "mindset": "This helps create narrative tension."
+        },
+        {
+            "term": "That's when",
+            "translation": "Foi aí que",
+            "use": "Very strong in interviews because it signals initiative, leadership, and action.",
+            "example": "That's when I decided to redesign the entire workflow.",
+            "example_translation": "Foi aí que eu decidi redesenhar todo o fluxo.",
+            "mindset": "I am showing the moment when I decided to act."
+        },
+        {
+            "term": "In order to",
+            "translation": "Para / com o objetivo de",
+            "use": "More professional than only using 'to'.",
+            "example": "We reorganized the process in order to improve efficiency.",
+            "example_translation": "Nós reorganizamos o processo para melhorar a eficiência.",
+            "mindset": "I am connecting action with purpose."
+        },
+        {
+            "term": "However",
+            "translation": "Porém / no entanto",
+            "use": "Use for contrast, change, or an unexpected problem.",
+            "example": "We had a solid strategy. However, the execution failed.",
+            "example_translation": "Tínhamos uma estratégia sólida. Porém, a execução falhou.",
+            "mindset": "I am showing contrast and complexity."
+        },
+        {
+            "term": "Even though",
+            "translation": "Mesmo que / apesar de",
+            "use": "Useful to show resilience.",
+            "example": "Even though my English is still improving, I am constantly challenging myself.",
+            "example_translation": "Mesmo com meu inglês ainda melhorando, eu continuo me desafiando.",
+            "mindset": "This connects directly with my story of growth."
+        },
+        {
+            "term": "Looking back",
+            "translation": "Olhando para trás",
+            "use": "Very strong for reflection at the end of a story.",
+            "example": "Looking back, that experience taught me how to lead under pressure.",
+            "example_translation": "Olhando para trás, essa experiência me ensinou como liderar sob pressão.",
+            "mindset": "I am showing learning and maturity."
+        }
+    ],
+    "powerful_verbs": [
+        {
+            "term": "Led",
+            "translation": "Liderei",
+            "example": "I led the communication strategy.",
+            "signal": "Leadership"
+        },
+        {
+            "term": "Managed",
+            "translation": "Gerenciei",
+            "example": "I managed multiple projects simultaneously.",
+            "signal": "Organization"
+        },
+        {
+            "term": "Implemented",
+            "translation": "Implementei",
+            "example": "I implemented a new workflow.",
+            "signal": "Execution"
+        },
+        {
+            "term": "Improved",
+            "translation": "Melhorei",
+            "example": "I improved team communication.",
+            "signal": "Progress"
+        },
+        {
+            "term": "Resolved",
+            "translation": "Resolvi",
+            "example": "I resolved a critical issue before launch.",
+            "signal": "Problem solving"
+        },
+        {
+            "term": "Aligned",
+            "translation": "Alinhei",
+            "example": "I aligned the campaign with business goals.",
+            "signal": "Strategic thinking"
+        },
+        {
+            "term": "Streamlined",
+            "translation": "Otimizei / tornei mais eficiente",
+            "example": "I streamlined the internal process.",
+            "signal": "Efficiency"
+        }
+    ],
+    "phrases_that_save": [
+        {
+            "term": "What I mean is...",
+            "translation": "O que eu quero dizer é...",
+            "use": "Use when you need time to clarify your thought."
+        },
+        {
+            "term": "Let me rephrase that.",
+            "translation": "Deixa eu reformular.",
+            "use": "Use when you want to correct yourself professionally."
+        },
+        {
+            "term": "The main point is...",
+            "translation": "O ponto principal é...",
+            "use": "Use when you want to return to the focus of the answer."
+        },
+        {
+            "term": "I may not know the exact term in English, but...",
+            "translation": "Talvez eu não saiba o termo exato em inglês, mas...",
+            "use": "Use instead of freezing when you forget a word."
+        },
+        {
+            "term": "How can I put this...",
+            "translation": "Como posso dizer isso...",
+            "use": "A natural way to gain time while thinking."
+        }
+    ],
+    "star_reflection": {
+        "situation": {
+            "label": "Situation",
+            "translation": "Contexto",
+            "example": "We were preparing for a major event."
+        },
+        "task": {
+            "label": "Task",
+            "translation": "Desafio",
+            "example": "The agency's delivery did not meet expectations."
+        },
+        "action": {
+            "label": "Action",
+            "translation": "Ação",
+            "example": "So I redesigned the entire visual structure myself."
+        },
+        "result": {
+            "label": "Result",
+            "translation": "Resultado",
+            "example": "We delivered everything on time."
+        },
+        "reflection": {
+            "label": "Reflection",
+            "translation": "Aprendizado",
+            "example": "That experience taught me how to work under pressure."
+        }
+    },
+    "marketing_terms": [
+        {
+            "term": "AARRR Funnel",
+            "translation": "Pirate Metrics",
+            "definition": "Framework used to analyze the user journey: Acquisition, Activation, Retention, Revenue, and Referral."
+        },
+        {
+            "term": "RICE Score",
+            "translation": "Pontuação RICE",
+            "definition": "Prioritization method based on Reach, Impact, Confidence, and Effort."
+        },
+        {
+            "term": "North Star Metric",
+            "translation": "Métrica Norte",
+            "definition": "The main metric that defines the long-term success of a product or strategy."
+        },
+        {
+            "term": "Churn Rate",
+            "translation": "Taxa de cancelamento",
+            "definition": "The rate at which users or creators stop using a product or platform."
+        },
+        {
+            "term": "LTV",
+            "translation": "Lifetime Value",
+            "definition": "The total value a user generates while staying connected to the platform."
+        },
+        {
+            "term": "ROI",
+            "translation": "Return on Investment",
+            "definition": "The return generated from an investment."
+        },
+        {
+            "term": "Insights",
+            "translation": "Percepções estratégicas",
+            "definition": "Valuable observations or data extracted from analysis."
+        },
+        {
+            "term": "Outreach",
+            "translation": "Contato ativo / prospecção",
+            "definition": "Communication efforts to reach new audiences, partners, or stakeholders."
+        },
+        {
+            "term": "Brand Love",
+            "translation": "Conexão emocional com a marca",
+            "definition": "A deep emotional connection between the user and the brand."
+        }
+    ],
+    "web3_terms": [
+        {
+            "term": "Ownership",
+            "translation": "Propriedade digital",
+            "definition": "The concept that creators can own their digital assets."
+        },
+        {
+            "term": "DAO",
+            "translation": "Organização Autônoma Descentralizada",
+            "definition": "Organizations managed by blockchain rules and community voting."
+        },
+        {
+            "term": "Governance Tokens",
+            "translation": "Tokens de governança",
+            "definition": "Digital assets that give holders voting power in project decisions."
+        },
+        {
+            "term": "Token-Gated Content",
+            "translation": "Conteúdo restrito por token",
+            "definition": "Exclusive content accessible only to people who hold a specific digital asset."
+        },
+        {
+            "term": "Creator Economy",
+            "translation": "Economia dos criadores",
+            "definition": "The economic ecosystem built by independent content creators."
+        },
+        {
+            "term": "Ecosystem Management",
+            "translation": "Gestão de ecossistemas",
+            "definition": "A broader view that goes beyond managing isolated channels."
+        },
+        {
+            "term": "Stakeholders",
+            "translation": "Partes interessadas",
+            "definition": "All groups involved or affected, such as creators, audiences, brands, and investors."
+        },
+        {
+            "term": "Scalability",
+            "translation": "Escalabilidade",
+            "definition": "The ability of a solution to grow without losing quality or increasing costs proportionally."
+        },
+        {
+            "term": "Alignment",
+            "translation": "Alinhamento",
+            "definition": "Connection between team goals and company vision."
+        },
+        {
+            "term": "Value-driven",
+            "translation": "Orientado a valor",
+            "definition": "A strategy focused on real benefits for people or communities."
+        },
+        {
+            "term": "Meaningful Engagement",
+            "translation": "Engajamento significativo",
+            "definition": "Interaction that goes beyond likes and focuses on depth and value."
+        }
+    ]
+}
