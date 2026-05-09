@@ -111,7 +111,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* HERO CARD & PROFILE IMAGE (O AJUSTE DA FOTO) */
+/* HERO CARD & PROFILE IMAGE (AJUSTADO E CORRIGIDO) */
 .hero-card {
   background: var(--card);
   border: 1px solid var(--line);
@@ -122,6 +122,9 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 420px;
+  /* Trava para o card não esticar */
+  width: 100%;
 }
 
 .profile-wrapper {
@@ -129,15 +132,20 @@ h2 {
   height: 180px;
   border-radius: 50%;
   overflow: hidden;
+  /* Essencial para manter o círculo */
   margin-bottom: 24px;
   border: 3px solid var(--purple);
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  flex-shrink: 0;
+  /* Impede que o círculo seja esmagado */
 }
 
 .profile-img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
+  /* Garante que a foto preencha o espaço sem distorcer */
   object-position: center;
 }
 
@@ -231,7 +239,7 @@ summary::-webkit-details-marker {
   font-size: 15px;
 }
 
-/* ASSISTENTE IA FLUTUANTE (MAXIMIZA/MINIMIZA) */
+/* ASSISTENTE IA FLUTUANTE */
 .ai-trigger {
   position: fixed;
   bottom: 30px;
@@ -286,7 +294,6 @@ summary::-webkit-details-marker {
   background: linear-gradient(var(--orange), var(--purple));
 }
 
-/* BOTÕES DE IDIOMA (GRID AJUSTADO) */
 .assistant-modes {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
