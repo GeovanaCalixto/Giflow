@@ -2,113 +2,166 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GiFlow</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GiFlow | AI-Assisted Interview Prep</title>
 
-  <link rel="stylesheet" href="./static/css/styles.css">
+  <link rel="stylesheet" href="./static/css/styles.css" />
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="header">
-    <h1 class="logo">GiFlow</h1>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-icon">G</span>
+      <span>GiFlow</span>
+    </div>
 
-    <nav>
-      <a href="#">About</a>
-      <a href="#">Stories</a>
-      <a href="#">Interview Bank</a>
-      <a href="#">Toolkit</a>
-      <a href="#">Dictionary</a>
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#stories">Stories</a>
+      <a href="#interview-bank">Interview Bank</a>
+      <a href="#language-toolkit">Toolkit</a>
+      <a href="#dictionary">Dictionary</a>
+      <a href="#assistant">AI</a>
     </nav>
   </header>
 
-  <!-- HERO -->
   <main>
 
     <section class="hero">
-
-      <!-- LEFT -->
-      <div class="hero-left">
-        <p class="subtitle">Personal AI-assisted interview system</p>
-
+      <div class="hero-content">
+        <p class="eyebrow">Personal AI-assisted interview system</p>
         <h1>GiFlow</h1>
-
         <h2>Strategic preparation for a Google interview.</h2>
 
-        <p class="description">
-          This project is not about hiding limitations. It is about showing how I build systems to accelerate learning,
-          organize communication, and improve performance.
+        <p class="hero-text">
+          This project is not about hiding limitations. It is about showing how I build
+          systems to accelerate learning, organize communication, and improve performance.
         </p>
 
-        <p class="tags">
-          Growth mindset • Storytelling • AI-assisted workflow
-        </p>
+        <div class="hero-tags">
+          <span>Growth mindset</span>
+          <span>Storytelling</span>
+          <span>AI-assisted workflow</span>
+        </div>
       </div>
 
-      <!-- RIGHT -->
-      <div class="hero-right">
-        <img src="https://i.pravatar.cc/200" alt="profile">
+      <div class="hero-card">
+        <div class="profile-wrapper">
+          <img src="./static/images/fotodeperfil.jpeg" class="profile-img" />
+        </div>
 
-        <h3>Google</h3>
+        <div class="google-logo">
+          <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span>
+          <span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+        </div>
 
         <p>
-          A personal operating system for communication, behavioral stories, vocabulary, and interview readiness.
+          A personal operating system for communication, behavioral stories,
+          vocabulary, and interview readiness.
         </p>
       </div>
-
     </section>
 
-    <!-- CONTENT -->
+    <section class="section" id="about">
+      <p class="section-label">About me</p>
+      <h2>Three versions of my personal narrative.</h2>
 
-    <section>
-      <h2 class="section-title">Narratives</h2>
-      <div id="narrativesContainer" class="grid"></div>
+      <div class="about-grid">
+
+        <details class="glass-card">
+          <summary>Short version</summary>
+          <div class="details-content">
+            <p>
+              I am a marketing-driven builder with startup energy, social impact experience,
+              and a growth mindset focused on learning fast and communicating clearly.
+            </p>
+          </div>
+        </details>
+
+        <details class="glass-card">
+          <summary>Medium version</summary>
+          <div class="details-content">
+            <p>
+              My background connects marketing, leadership, volunteering, startup environments,
+              and an MBA in Web3. I like turning ambiguity into structure.
+            </p>
+          </div>
+        </details>
+
+        <details class="glass-card">
+          <summary>Long version</summary>
+          <div class="details-content">
+            <p>
+              I see career development as an operating system: goals, feedback loops, practice,
+              vocabulary, stories, and reflection.
+            </p>
+          </div>
+        </details>
+
+      </div>
     </section>
 
-    <section>
-      <h2 class="section-title">Stories</h2>
-      <div id="storiesContainer" class="grid"></div>
+    <section class="section" id="interview-bank">
+      <p class="section-label">Interview bank</p>
+      <h2>Strategic answers for high-impact questions.</h2>
+      <div class="interview-bank-grid" id="interviewBankGrid"></div>
     </section>
 
-    <section>
-      <h2 class="section-title">Interview Bank</h2>
-      <div id="interviewBankGrid" class="grid"></div>
+    <section class="section" id="language-toolkit">
+      <p class="section-label">Language toolkit</p>
+      <h2>Strong phrases and connectors.</h2>
+      <div class="toolkit-grid" id="languageToolkitGrid"></div>
     </section>
 
-    <section>
-      <h2 class="section-title">Toolkit</h2>
-      <div id="languageToolkitGrid" class="grid"></div>
+    <section class="section" id="dictionary">
+      <p class="section-label">Dictionary</p>
+
+      <div class="dictionary-grid">
+        <div class="dictionary-card">
+          <h3>Connectors</h3>
+          <ul>
+            <li>First, I would like to give context</li>
+            <li>The main challenge was</li>
+            <li>As a result</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <!-- AI ASSISTANT -->
-  <div id="assistant" class="assistant hidden">
+  <!-- BOTÃO IA -->
+  <button id="ai-trigger" class="ai-trigger">AI</button>
 
-    <div class="assistant-box">
-
-      <div class="assistant-header">
-        <span>AI</span>
-        <button id="close-ai">✕</button>
+  <!-- IA -->
+  <section class="assistant hidden" id="assistant">
+    <div class="assistant-header">
+      <div class="assistant-avatar"></div>
+      <div>
+        <h3>GiFlow AI</h3>
+        <p>Contextual prep assistant</p>
       </div>
-
-      <div class="assistant-modes">
-        <button class="mode-btn active" data-mode="short">Short</button>
-        <button class="mode-btn" data-mode="medium">Medium</button>
-        <button class="mode-btn" data-mode="long">Long</button>
-      </div>
-
-      <textarea placeholder="Ask something..."></textarea>
-
+      <button id="close-ai" class="close-btn">&times;</button>
     </div>
 
-    
-  </div>
+    <div class="assistant-modes">
+      <button class="mode-btn active">Bilingual</button>
+      <button class="mode-btn">English</button>
+      <button class="mode-btn">Português</button>
+      <button class="mode-btn">Translate</button>
+    </div>
 
-  <!-- BOTÃO FLUTUANTE -->
-  <button id="ai-trigger" class="ai-trigger">AI</button>
+    <div class="assistant-messages">
+      <div class="bot-message">Ready to prep!</div>
+    </div>
+
+    <form class="assistant-form">
+      <input type="text" placeholder="Ask me..." />
+      <button>Send</button>
+    </form>
+  </section>
 
   <script src="./static/js/app.js"></script>
 
