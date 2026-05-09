@@ -60,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// LÓGICA DA IA (ABRIR/FECHAR)
+document.addEventListener('DOMContentLoaded', () => {
+
 const aiTrigger = document.getElementById('ai-trigger');
 const aiAssistant = document.getElementById('assistant');
 const closeAi = document.getElementById('close-ai');
@@ -71,6 +72,8 @@ aiTrigger.addEventListener('click', () => {
 
 closeAi.addEventListener('click', () => {
   aiAssistant.classList.add('hidden');
+});
+
 });
 
 // MODOS DE IDIOMA
