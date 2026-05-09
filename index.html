@@ -4,17 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GiFlow | AI-Assisted Interview Prep</title>
-  <link rel="stylesheet" href="static/css/styles.css" />
+  <title>GiFlow | AI-Assisted Interview Preparation</title>
+  <!-- Usando o caminho padrão do Flask conforme seu exemplo -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
 </head>
 
 <body>
 
   <header class="topbar">
     <div class="brand">
-      <div class="brand-icon">G</div>
+      <span class="brand-icon">G</span>
       <span>GiFlow</span>
     </div>
+
     <nav class="nav">
       <a href="#about">About</a>
       <a href="#stories">Stories</a>
@@ -45,124 +47,162 @@
 
       <div class="hero-card">
         <div class="profile-photo">
-          <!-- Certifique-se de que o caminho da imagem está correto -->
-          <img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto"
-            style="width: 100%; height: 100%; object-fit: cover;">
+          <img src="{{ url_for('static', filename='images/fotodeperfil.jpeg') }}" alt="Geovana Calixto"
+            style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
         </div>
         <div class="google-logo">
           <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
             class="blue">g</span><span class="green">l</span><span class="red">e</span>
         </div>
-        <p>A personal operating system for communication, behavioral stories, and interview readiness.</p>
+        <p>A personal operating system for communication, behavioral stories, vocabulary, and interview readiness.</p>
       </div>
     </section>
 
-    <!-- NARRATIVAS (ABOUT ME) - EXPANSÍVEIS -->
+    <!-- ABOUT SECTION COM EXPANSÃO (DETAILS) -->
     <section class="section" id="about">
       <p class="section-label">About me</p>
       <h2>Three versions of my personal narrative.</h2>
       <div class="about-grid">
-        <details class="glass-card">
-          <summary>Short version <span class="arrow">↓</span></summary>
-          <div class="details-content">
+        <article class="glass-card">
+          <details>
+            <summary>
+              <h3>Short version</h3>
+            </summary>
             <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset
               focused on learning fast and communicating clearly.</p>
-          </div>
-        </details>
+          </details>
+        </article>
 
-        <details class="glass-card">
-          <summary>Medium version <span class="arrow">↓</span></summary>
-          <div class="details-content">
-            <p>My background connects marketing, leadership, volunteering, and startup environments. I hold an MBA
-              focused on Web 3.0 and emerging technologies.</p>
-          </div>
-        </details>
+        <article class="glass-card">
+          <details>
+            <summary>
+              <h3>Medium version</h3>
+            </summary>
+            <p>My background connects marketing, leadership, volunteering, startup environments, and an MBA in Web3. I
+              like turning ambiguity into structure and using technology to learn faster.</p>
+          </details>
+        </article>
 
-        <details class="glass-card">
-          <summary>Long version <span class="arrow">↓</span></summary>
-          <div class="details-content">
-            <p>I see career development as an operating system. My journey includes rebranding projects like Único
-              Roteiro and participating in relief efforts in Rio Grande do Sul during the 2024 climate tragedy.</p>
-            <p>I am a specialist in UI/UX and product design, committed to high-quality, natural visual edits and
-              professional proficiency in English.</p>
-          </div>
-        </details>
+        <article class="glass-card">
+          <details>
+            <summary>
+              <h3>Long version</h3>
+            </summary>
+            <p>I see career development as an operating system: goals, feedback loops, practice, vocabulary, stories,
+              and reflection. GiFlow translates that mindset into a practical preparation environment.</p>
+            <p>This includes my experience with projects like Único Roteiro and sustainable sewing initiatives for women
+              in vulnerability.</p>
+          </details>
+        </article>
       </div>
     </section>
 
-    <!-- SECTION STORIES -->
+    <!-- CORE STORIES SECTION -->
     <section class="section" id="stories">
       <p class="section-label">Core stories</p>
       <h2>Behavioral examples organized with structure.</h2>
       <div class="stories-grid">
         <article class="story-card">
           <h3>Leadership</h3>
-          <p><strong>Situation:</strong> Different people had different priorities.</p>
-          <p><strong>Action:</strong> I listened first, clarified goals, and broke the problem into steps.</p>
+          <p><strong>Situation:</strong> Different people had different priorities and communication styles.</p>
+          <p><strong>Challenge:</strong> Create alignment without relying only on authority.</p>
+          <p><strong>Action:</strong> I listened first, clarified goals, and broke the problem into next steps.</p>
           <p><strong>Result:</strong> The team moved with more clarity and ownership.</p>
         </article>
+
         <article class="story-card">
           <h3>Conflict Resolution</h3>
           <p><strong>Action:</strong> I reframed the conversation around shared goals.</p>
           <p><strong>Result:</strong> The team regained alignment.</p>
+          <p><strong>Reflection:</strong> Conflict often means context is missing.</p>
+        </article>
+
+        <article class="story-card">
+          <h3>Pressure</h3>
+          <p><strong>Action:</strong> I prioritized high-impact tasks and created a simple rhythm.</p>
+          <p><strong>Result:</strong> I protected quality and kept improving.</p>
         </article>
       </div>
     </section>
 
-    <!-- DICTIONARY SECTION - COMPLETO -->
+    <!-- SEÇÕES CARREGADAS POR JS -->
+    <section class="section" id="interview-bank">
+      <p class="section-label">Interview bank</p>
+      <h2>Strategic answers for high-impact interview questions.</h2>
+      <div class="interview-bank-grid" id="interviewBankGrid"></div>
+    </section>
+
+    <section class="section" id="language-toolkit">
+      <p class="section-label">Language toolkit</p>
+      <div class="toolkit-grid" id="languageToolkitGrid"></div>
+    </section>
+
+    <!-- DICTIONARY SECTION - RESTAURADA -->
     <section class="section" id="dictionary">
-      <p class="section-label">Dictionary</p>
-      <h2>Essential Terms & Concepts</h2>
+      <p class="section-label">Interview dictionary</p>
+      <h2>Vocabulary and phrases for fluency.</h2>
       <div class="dictionary-grid">
-        <div class="glass-card">
-          <span class="label">Grammar</span>
-          <h3>Connectives</h3>
-          <p>Study of "of", "to", and quantifiers like "some" for grammar connectivity.</p>
+        <div class="dictionary-card">
+          <h3>Connectors</h3>
+          <ul>
+            <li>First, I would like to give some context</li>
+            <li>The main challenge was</li>
+            <li>As a result</li>
+            <li>Looking back</li>
+          </ul>
         </div>
-        <div class="glass-card">
-          <span class="label">Impact</span>
-          <h3>Sustainable Sewing</h3>
-          <p>Empowering women in vulnerability through sustainable sewing initiatives.</p>
+        <div class="dictionary-card">
+          <h3>Leadership vocabulary</h3>
+          <ul>
+            <li>Ownership</li>
+            <li>Alignment</li>
+            <li>Hands-on approach</li>
+            <li>Adaptability</li>
+          </ul>
         </div>
-        <div class="glass-card">
-          <span class="label">Tech</span>
-          <h3>Web3 Landing Page</h3>
-          <p>Implementing JavaScript filtering systems and landing page architecture.</p>
+        <div class="dictionary-card">
+          <h3>Fluency support</h3>
+          <ul>
+            <li>Let me rephrase that</li>
+            <li>What I mean is</li>
+            <li>The key point is</li>
+            <li>To make it more concrete</li>
+          </ul>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- BOTÃO FLUTUANTE -->
-  <button id="chat-trigger" class="chat-trigger">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="30" height="30">
-      <path
-        d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 13.4876 3.36093 14.891 4 16.1272L3 21L7.8728 20C9.10897 20.6391 10.5124 21 12 21Z"
-        stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    </svg>
-  </button>
-
-  <!-- ASSISTENTE IA -->
-  <section class="assistant hidden" id="assistant">
+  <!-- ASSISTENTE IA COM OPÇÕES DE IDIOMA -->
+  <section class="assistant" id="assistant">
     <div class="assistant-header">
       <div class="assistant-avatar"></div>
       <div>
         <h3>GiFlow AI</h3>
         <p>Contextual prep assistant</p>
       </div>
-      <button id="close-chat" class="close-btn">&times;</button>
     </div>
-    
+
+    <div class="assistant-modes">
+      <button type="button" class="mode-btn active" data-mode="bilingual">Bilingual</button>
+      <button type="button" class="mode-btn" data-mode="english">English</button>
+      <button type="button" class="mode-btn" data-mode="portuguese">Português</button>
+      <button type="button" class="mode-btn" data-mode="translate">Translate</button>
+    </div>
+
     <div class="assistant-messages" id="chat-messages">
-      <div class="bot-message">Olá! Como posso ajudar na sua preparação hoje?</div>
+      <div class="bot-message">
+        Ask me about leadership, conflict, pressure, vocabulary, or STAR answers.
+      </div>
     </div>
+
     <form class="assistant-form" id="chat-form">
-      <input type="text" id="user-input" placeholder="Ask me anything..." />
+      <input type="text" id="user-input" placeholder="Tell me about leadership" />
       <button type="submit">Send</button>
     </form>
   </section>
 
-  <script src="static/js/app.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 </body>
 
 </html>
