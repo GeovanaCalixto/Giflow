@@ -472,11 +472,6 @@ li + li {
   margin-left: 28px;
 }
 
-.muted-line {
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .assistant-form {
   padding: 14px;
   display: flex;
