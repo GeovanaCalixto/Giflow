@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,134 +7,146 @@
     <link rel="stylesheet" href="static/css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <header class="topbar">
-        <div class="brand">
-            <span class="brand-icon">G</span>
-            <span>GiFlow</span>
-        </div>
-        <nav class="nav">
-            <a href="#about">About</a>
-            <a href="#stories">Stories</a>
-            <a href="#interview-bank">Bank</a>
-            <a href="#language-toolkit">Toolkit</a>
-            <a href="#dictionary">Dictionary</a>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">Personal AI-assisted interview system</p>
-                <h1>GiFlow</h1>
-                <h2>Strategic preparation for a Google interview.</h2>
-                <p class="hero-text">
-                    A project built to accelerate learning, organize communication, and showcase a growth mindset.
-                </p>
-            </div>
-            <div class="hero-card">
-                <div class="profile-wrapper">
-                    <img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto" class="profile-img">
-                </div>
-                <div class="google-logo">
-                    <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
-                </div>
-                <p>A personal operating system for communication and interview readiness.</p>
-            </div>
-        </section>
-
-        <section class="section" id="about">
-            <p class="section-label">About me</p>
-            <h2>Narratives</h2>
-            <div class="about-grid">
-                <details class="glass-card">
-                    <summary><h3>Short version</h3></summary>
-                    <div class="details-content">
-                        <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset focused on learning fast.</p>
-                    </div>
-                </details>
-                <details class="glass-card">
-                    <summary><h3>Medium version</h3></summary>
-                    <div class="details-content">
-                        <p>UI/UX specialist with an MBA in Web3, focusing on turning ambiguity into structure and scale. I bridge the gap between creative design and business goals.</p>
-                    </div>
-                </details>
-                <details class="glass-card">
-                    <summary><h3>Long version</h3></summary>
-                    <div class="details-content">
-                        <p>Career development as an OS. Experience with Único Roteiro and relief efforts in RS. I specialize in UI/UX and strategic product growth, using a minimalist and authentic aesthetic to solve complex problems.</p>
-                    </div>
-                </details>
-            </div>
-        </section>
-
-        <section class="section" id="stories">
-            <p class="section-label">Core stories</p>
-            <h2>Behavioral Examples</h2>
-            <div class="stories-grid">
-                <div class="story-card">
-                    <h3>Leadership</h3>
-                    <p><strong>Situation:</strong> Team misalignment on priorities during rebranding.</p>
-                    <p><strong>Action:</strong> Clarified goals and listened to stakeholders to find common ground.</p>
-                    <p><strong>Result:</strong> Restored trust and team velocity, leading to a successful launch.</p>
-                </div>
-                </div>
-        </section>
-
-        <section class="section" id="interview-bank">
-            <p class="section-label">Interview Bank</p>
-            <div class="interview-bank-grid" id="interviewBankGrid"></div>
-        </section>
-
-        <section class="section" id="language-toolkit">
-            <p class="section-label">Language Toolkit</p>
-            <div class="toolkit-grid" id="languageToolkitGrid"></div>
-        </section>
-
-        <section class="section" id="dictionary">
-            <p class="section-label">Dictionary</p>
-            <div class="dictionary-grid">
-                <div class="glass-card">
-                    <h3>Connectors</h3>
-                    <p>Focus on connectives like "First, I'd like to context...", "Nevertheless" and quantifiers.</p>
-                </div>
-                <div class="glass-card">
-                    <h3>Leadership</h3>
-                    <p>Ownership, alignment, and hands-on approach.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="ai-container">
-        <button id="ai-trigger" class="ai-trigger"><span>AI</span></button>
-        <section class="assistant hidden" id="assistant">
-            <div class="assistant-header">
-                <div class="assistant-avatar"></div>
-                <div class="header-info">
-                    <h3>GiFlow AI</h3>
-                    <p>Contextual Prep</p>
-                </div>
-                <button id="close-ai" class="close-btn">&times;</button>
-            </div>
-            <div class="assistant-modes">
-                <button class="mode-btn active" data-mode="bilingual">Bilingual</button>
-                <button class="mode-btn" data-mode="english">English</button>
-                <button class="mode-btn" data-mode="portuguese">Português</button>
-                <button class="mode-btn" data-mode="translate">Translate</button>
-            </div>
-            <div class="assistant-messages" id="chat-messages">
-                <div class="bot-message">Ready to prep! Ready to refine your STAR answers.</div>
-            </div>
-            <form class="assistant-form" id="chat-form">
-                <input type="text" id="user-input" placeholder="Ask me..." />
-                <button type="submit">Send</button>
-            </form>
-        </section>
+<header class="topbar">
+    <div class="brand">
+        <span class="brand-icon">G</span>
+        <span>GiFlow</span>
     </div>
+    <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#stories">Stories</a>
+        <a href="#interview-bank">Bank</a>
+        <a href="#language-toolkit">Toolkit</a>
+        <a href="#dictionary">Dictionary</a>
+    </nav>
+</header>
 
-    <script src="static/js/app.js"></script>
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Personal AI-assisted interview system</p>
+            <h1>GiFlow</h1>
+            <h2>Strategic preparation for a Google interview.</h2>
+            <p class="hero-text">
+                A project built to accelerate learning, organize communication, and showcase a growth mindset.
+            </p>
+        </div>
+        <div class="hero-card">
+            <div class="profile-wrapper">
+                <img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto" class="profile-img">
+            </div>
+            <div class="google-logo">
+                <span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span class="blue">g</span><span class="green">l</span><span class="red">e</span>
+            </div>
+            <p>A personal operating system for communication and interview readiness.</p>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <p class="section-label">About me</p>
+        <h2>Narratives</h2>
+        <div class="about-grid">
+            <details class="glass-card">
+                <summary><h3>Short version</h3></summary>
+                <div class="details-content">
+                    <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset focused on learning fast.</p>
+                </div>
+            </details>
+            <details class="glass-card">
+                <summary><h3>Medium version</h3></summary>
+                <div class="details-content">
+                    <p>UI/UX specialist with an MBA in Web3. I bridge the gap between creative design and business goals, turning ambiguity into structure and scale.</p>
+                </div>
+            </details>
+            <details class="glass-card">
+                <summary><h3>Long version</h3></summary>
+                <div class="details-content">
+                    <p>Career development as an OS. Experience with Único Roteiro and leading humanitarian design efforts in RS. I specialize in strategic product growth and high-quality visual edits.</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <section class="section" id="stories">
+        <p class="section-label">Core Stories</p>
+        <h2>Behavioral Examples</h2>
+        <div class="stories-grid">
+            <article class="glass-card">
+                <h3>Leadership</h3>
+                <div class="details-content">
+                    <p><strong>Situation:</strong> Team misalignment during rebranding.</p>
+                    <p><strong>Action:</strong> Clarified goals and listened to stakeholders.</p>
+                    <p><strong>Result:</strong> Restored trust and team velocity.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="interview-bank">
+        <p class="section-label">Interview Bank</p>
+        <div class="interview-bank-grid">
+            <article class="glass-card">
+                <span class="section-label" style="font-size: 10px;">Strategic Answer</span>
+                <h3>Tell me about yourself</h3>
+                <p>Strategic overview of my career as an evolving operating system.</p>
+                <details>
+                    <summary>Open full answer</summary>
+                    <div class="details-content">
+                        <p>Focus on: Leadership, Web3 MBA, and projects like Único Roteiro.</p>
+                    </div>
+                </details>
+            </article>
+        </div>
+    </section>
+
+    <section class="section" id="dictionary">
+        <p class="section-label">Language Toolkit</p>
+        <div class="dictionary-grid">
+            <div class="glass-card">
+                <h3>Connectors</h3>
+                <p>Focus on connectives like "First, I'd like to provide context...", "Nevertheless" and quantifiers like "some".</p>
+            </div>
+            <div class="glass-card">
+                <h3>Impact Verbs</h3>
+                <ul style="list-style: none; padding: 0; color: var(--muted); text-align: left;">
+                    <li>• Spearheaded (Liderei)</li>
+                    <li>• Synthesized (Sintetizei)</li>
+                    <li>• Optimized (Otimizei)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="ai-container">
+    <button id="ai-trigger" class="ai-trigger"><span>AI</span></button>
+    <section class="assistant hidden" id="assistant">
+        <div class="assistant-header">
+            <div class="assistant-avatar"></div>
+            <div class="header-info">
+                <h3>GiFlow AI</h3>
+                <p>Contextual Prep</p>
+            </div>
+            <button id="close-ai" class="close-btn">&times;</button>
+        </div>
+        <div class="assistant-modes">
+            <button class="mode-btn active">Bilingual</button>
+            <button class="mode-btn">English</button>
+            <button class="mode-btn">Português</button>
+            <button class="mode-btn">Translate</button>
+        </div>
+        <div class="assistant-messages" id="chat-messages">
+            <div class="bot-message">Ready to prep! I've loaded your stories and narratives.</div>
+        </div>
+        <form class="assistant-form">
+            <input type="text" placeholder="Ask me..." />
+            <button type="submit">Send</button>
+        </form>
+    </section>
+</div>
+
+<script src="static/js/app.js"></script>
 </body>
 </html>
