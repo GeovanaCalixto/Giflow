@@ -1,87 +1,157 @@
-// CONTEÚDOS ORIGINAIS DA REFERÊNCIA
-const giFlowData = {
-  narratives: [
-    { id: "short", title: "Short version", text: "I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset focused on learning fast." },
-    { id: "medium", title: "Medium version", text: "My background connects marketing, leadership, volunteering, and an MBA in Web3. I like turning ambiguity into structure." },
-    { id: "long", title: "Long version", text: "I see career development as an OS. Experience with Único Roteiro and relief efforts in RS. Specialist in product design." }
-  ],
-  stories: [
-    { title: "Leadership", situation: "Different communication styles.", action: "Listened first, clarified goals.", result: "Alignment regained." },
-    { title: "Conflict", situation: "Stakeholders had different priorities.", action: "Reframed around shared goals.", result: "Trust restored." },
-    { title: "Pressure", situation: "Multiple responsibilities.", action: "Prioritized high-impact tasks.", result: "Protected quality." }
-  ],
-  bank: [
-    { q: "Tell me about yourself", a: "Focus on the builder mindset and the OS analogy." },
-    { q: "Why Google?", a: "Alignment with innovation, scale, and mission-driven culture." }
-  ],
-  toolkit: [
-    { cat: "Connectors", items: ["First, I would like to give context", "The main challenge was", "As a result"] },
-    { cat: "Leadership", items: ["Ownership", "Alignment", "Hands-on approach", "Adaptability"] }
-  ]
-};
+// SELETORES EXISTENTES
+const form = document.querySelector(".assistant-form");
+const input = document.querySelector(".assistant-form input");
+const messages = document.querySelector(".assistant-messages");
+const modeButtons = document.querySelectorAll(".mode-btn");
+const interviewBankGrid = document.querySelector("#interviewBankGrid");
+const languageToolkitGrid = document.querySelector("#languageToolkitGrid");
 
-// RENDERIZAÇÃO
-document.addEventListener('DOMContentLoaded', () => {
-  const narrativesGrid = document.getElementById('narrativesContainer');
-  giFlowData.narratives.forEach(n => {
-    narrativesGrid.innerHTML += `
-            <details class="glass-card">
-                <summary>${n.title}</summary>
-                <div class="details-content"><p>${n.text}</p></div>
-            </details>
-        `;
-  });
+// NOVOS SELETORES PARA ABRIR/FECHAR IA
+const aiTrigger = document.querySelector("#ai-trigger");
+const assistantWindow = document.querySelector("#assistant");
+const closeAi = document.querySelector("#close-ai");
 
-  const storiesGrid = document.getElementById('storiesContainer');
-  giFlowData.stories.forEach(s => {
-    storiesGrid.innerHTML += `
-            <div class="story-card">
-                <h3>${s.title}</h3>
-                <p><strong>Situation:</strong> ${s.situation}</p>
-                <p><strong>Action:</strong> ${s.action}</p>
-                <p><strong>Result:</strong> ${s.result}</p>
+let currentMode = "bilingual";
+
+// --- LÓGICA DE ABRIR/FECHAR (CORREÇÃO) ---
+if (aiTrigger) {
+    aiTrigger.onclick = (e) => {
+        e.stopPropagation();
+        assistantWindow.classList.toggle("hidden");
+    };
+}
+
+if (closeAi) {
+    closeAi.onclick = () => {
+        assistantWindow.classList.add("hidden");
+    };
+}
+
+// Fechar ao clicar fora
+document.addEventListener("click", (e) => {
+    if (assistantWindow && !assistantWindow.contains(e.target) && e.target !== aiTrigger) {
+        assistantWindow.classList.add("hidden");
+    }
+});
+
+// --- SUA LÓGICA ORIGINAL DE MENSAGENS E CARDS ---
+function addMessage(type, title, text, tips = []) {
+    const message = document.createElement("div");
+    message.classList.add(type === "user" ? "user-message" : "bot-message");
+
+    const tipsHtml = tips.length ? `<ul>${tips.map((tip) => `<li>${tip}</li>`).join("")}</ul>` : "";
+    const formattedText = text.replace(/\n/g, "<br>");
+
+    message.innerHTML = `<strong>${title}</strong><p>${formattedText}</p>${tipsHtml}`;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
+}
+
+function addLoadingMessage() {
+    const message = document.createElement("div");
+    message.classList.add("bot-message");
+    message.innerHTML = `<strong>Thinking...</strong><p>Reading your system.</p>`;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight;
+    return message;
+}
+
+function createBankCard(key, item) {
+    const card = document.createElement("article");
+    card.classList.add("glass-card"); // Usando sua classe CSS chic
+    const title = key.replaceAll("_", " ").replace(/\b\w/g, (l) => l.toUpperCase());
+
+    card.innerHTML = `
+        <span class="section-label">Strategic answer</span>
+        <h3>${title}</h3>
+        <p style="color:var(--muted); font-size:14px;">${item.english.substring(0, 80)}...</p>
+        <details>
+            <summary style="justify-content:center;">Open full answer</summary>
+            <div class="details-content">
+                <p><strong>English:</strong><br>${item.english}</p>
+                <p><strong>Português:</strong><br>${item.portuguese}</p>
             </div>
-        `;
-  });
+        </details>
+    `;
+    return card;
+}
 
-  const bankGrid = document.getElementById('interviewBankGrid');
-  giFlowData.bank.forEach(b => {
-    bankGrid.innerHTML += `<div class="glass-card"><h3>${b.q}</h3><p>${b.a}</p></div>`;
-  });
+function createToolkitCard(title, items, fields) {
+    const card = document.createElement("article");
+    card.classList.add("glass-card");
+    const listItems = items.slice(0, 5).map((item) => {
+        const content = fields.filter((f) => item[f]).map((f) => item[f]).join(" | ");
+        return `<li style="font-size:13px; margin-bottom:5px;">${content}</li>`;
+    }).join("");
 
-  const toolkitGrid = document.getElementById('languageToolkitGrid');
-  giFlowData.toolkit.forEach(t => {
-    toolkitGrid.innerHTML += `
-            <div class="glass-card">
-                <h3>${t.cat}</h3>
-                <ul style="list-style:none; padding:0; color:var(--muted);">${t.items.map(i => `<li>${i}</li>`).join('')}</ul>
-            </div>
-        `;
-  });
+    card.innerHTML = `
+        <span class="section-label">Support</span>
+        <h3>${title}</h3>
+        <ul style="list-style:none; padding:0; text-align:left;">${listItems}</ul>
+    `;
+    return card;
+}
+
+// --- CARREGAMENTO DE CONTEÚDO ---
+async function loadPageContent() {
+    try {
+        const response = await fetch("/api/content");
+        const data = await response.json();
+
+        if (interviewBankGrid && data.interview_bank) {
+            interviewBankGrid.innerHTML = "";
+            Object.entries(data.interview_bank).forEach(([key, item]) => {
+                interviewBankGrid.appendChild(createBankCard(key, item));
+            });
+        }
+
+        if (languageToolkitGrid && data.language) {
+            languageToolkitGrid.innerHTML = "";
+            // Renderiza as categorias do seu JSON de tradução
+            const categories = ["connectives", "powerful_verbs", "phrases_that_save", "marketing_terms", "web3_terms"];
+            categories.forEach(cat => {
+                if(data.language[cat]) {
+                    languageToolkitGrid.appendChild(createToolkitCard(cat.replace("_", " "), data.language[cat], ["term", "translation"]));
+                }
+            });
+        }
+    } catch (error) {
+        console.error("API offline, usando modo estático", error);
+    }
+}
+
+// MUDANÇA DE MODO
+modeButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        modeButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+        currentMode = button.dataset.mode;
+    });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// SUBMIT DO CHAT
+form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const userText = input.value.trim();
+    if (!userText) return;
 
-const aiTrigger = document.getElementById('ai-trigger');
-const aiAssistant = document.getElementById('assistant');
-const closeAi = document.getElementById('close-ai');
+    addMessage("user", "You", userText);
+    input.value = "";
+    const loading = addLoadingMessage();
 
-aiTrigger.addEventListener('click', () => {
-  aiAssistant.classList.toggle('hidden');
+    try {
+        const response = await fetch("/api/assistant", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: userText, mode: currentMode })
+        });
+        const data = await response.json();
+        loading.remove();
+        addMessage("bot", data.title, data.answer, data.tips || []);
+    } catch (error) {
+        loading.remove();
+        addMessage("bot", "System Mode", "API disconnected. Ready to edit local code.");
+    }
 });
 
-closeAi.addEventListener('click', () => {
-  aiAssistant.classList.add('hidden');
-});
-
-});
-
-// MODOS DE IDIOMA
-const modeBtns = document.querySelectorAll('.mode-btn');
-modeBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    modeBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    console.log("Mode switched to:", btn.dataset.mode);
-  });
-});
+loadPageContent();
