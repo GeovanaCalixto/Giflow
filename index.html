@@ -1,152 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GiFlow | AI-Assisted Interview Prep</title>
-<link rel="stylesheet" href="static/css/styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GiFlow | Google Prep OS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header class="topbar">
-<div class="brand">
-<span class="brand-icon">G</span>
-<span>GiFlow</span>
-</div>
-<nav class="nav">
-<a href="#about">About</a>
-<a href="#stories">Stories</a>
-<a href="#interview-bank">Bank</a>
-<a href="#language-toolkit">Toolkit</a>
-<a href="#dictionary">Dictionary</a>
-</nav>
-</header>
+    <header class="main-header">
+        <div class="brand">GiFlow</div>
+        <h1>Strategic preparation for a Google interview.</h1>
+        <p class="hero-desc">Personal operating system for communication and growth mindset.</p>
+    </header>
 
-<main>
-<section class="hero">
-<div class="hero-content">
-<p class="eyebrow">Personal AI-assisted interview system</p>
-<h1>GiFlow</h1>
-<h2>Strategic preparation for a Google interview.</h2>
-<p class="hero-text">
- This project is not about hiding limitations. It is about showing how I build
-systems to accelerate learning, organize communication, and improve performance.
-</p>
-  
-</div>
-<div class="hero-card">
-<div class="profile-photo">
-<img src="static/images/fotodeperfil.jpeg" alt="Geovana Calixto"
-style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
-</div>
-  
-<div class="google-logo">
-<span class="blue">G</span><span class="red">o</span><span class="yellow">o</span><span
-class="blue">g</span><span class="green">l</span><span class="red">e</span>
-</div>
-  
-<p>A personal operating system for communication, behavioral stories,
-          vocabulary, and interview readiness..</p>
-</div>
-</section>
+    <main class="content-container">
+        <section class="section">
+            <h2 class="label">Narratives</h2>
+            
+            <details class="expand-card">
+                <summary>Short version</summary>
+                <div class="card-body">
+                    <p>I am a marketing-driven builder with startup energy, social impact experience, and a growth mindset focused on learning fast.</p>
+                </div>
+            </details>
 
-  <!-- NARRATIVAS EXPANSÍVEIS -->
-<section class="section" id="about">
-  <p class="section-label">About me</p>
-  <h2>Three versions of my personal narrative</h2>
-  <div class="about-grid">
-    <details class="glass-card">
-      <summary>
-        <h3>Short version</h3>
-      </summary>
-      <p> I am a marketing-driven builder with startup energy, social impact experience,
-            and a growth mindset focused on learning fast and communicating clearly..</p>
-    </details>
-    <details class="glass-card">
-      <summary>
-        <h3>Medium version</h3>
-      </summary>
-      <p>My background connects marketing, leadership, volunteering, startup environments,
-            and an MBA in Web3. I like turning ambiguity into structure and using technology
-            to learn faster.</p>
-    </details>
-    <details class="glass-card">
-      <summary>
-        <h3>Long version</h3>
-      </summary>
-      <p>I see career development as an operating system: goals, feedback loops, practice,
-            vocabulary, stories, and reflection. GiFlow translates that mindset into a practical
-            preparation environment..</p>
-    </details>
-  </div>
-</section>
+            <details class="expand-card">
+                <summary>Medium version</summary>
+                <div class="card-body">
+                    <p>My background connects marketing, leadership, and volunteering. With an MBA in Web3, I like turning ambiguity into structure and scale.</p>
+                </div>
+            </details>
 
-<!-- INTERVIEW BANK & TOOLKIT (CONTAINERS PARA O JS) -->
-<section class="section" id="interview-bank">
-  <p class="section-label">Interview Bank</p>
-  <div class="interview-bank-grid" id="interviewBankGrid">
-    <!-- O seu arquivo app.js preencherá aqui -->
-  </div>
-</section>
+            <details class="expand-card">
+                <summary>Long version</summary>
+                <div class="card-body">
+                    <p>I see career development as an OS. From rebranding Único Roteiro to leading humanitarian design efforts in RS, I specialize in UI/UX and strategic product growth.</p>
+                </div>
+            </details>
+        </section>
 
-<section class="section" id="language-toolkit">
-  <p class="section-label">Language Toolkit</p>
-  <div class="toolkit-grid" id="languageToolkitGrid">
-    <!-- O seu arquivo app.js preencherá aqui -->
-  </div>
-</section>
+        <section class="section">
+            <h2 class="label">Core Stories (STAR)</h2>
+            <div class="grid-layout">
+                <div class="static-card">
+                    <h3>Leadership</h3>
+                    <p><strong>Situation:</strong> Team misalignment on priorities.</p>
+                    <p><strong>Action:</strong> Clarified goals and listened to stakeholders.</p>
+                    <p><strong>Result:</strong> Restored trust and team velocity.</p>
+                </div>
+            </div>
+        </section>
 
-<section class="section" id="dictionary">
-  <p class="section-label">Dictionary</p>
-  <div class="dictionary-grid">
-    <div class="glass-card">
-      <h3>Connectors</h3>
-      <p>Focus on connectives like "of", "to" and quantifiers like "some".</p>
+        <section class="section">
+            <h2 class="label">Language Toolkit</h2>
+            <div class="grid-layout">
+                <div class="static-card">
+                    <h3>Connectors</h3>
+                    <p>"First, I'd like to provide context..." / "Nevertheless..." / "The core objective was..."</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="ai-wrapper">
+        <button id="ai-btn" class="ai-trigger-icon">AI</button>
+        <div id="ai-window" class="ai-panel hidden">
+            <div class="ai-header">
+                <strong>GiFlow AI Assistant</strong>
+                <button id="ai-close">&times;</button>
+            </div>
+            <div class="ai-modes">
+                <button class="m-btn active">Bilingual</button>
+                <button class="m-btn">English</button>
+                <button class="m-btn">Português</button>
+                <button class="m-btn">Translate</button>
+            </div>
+            <div class="ai-chat">Ready to prep. How can I help you today?</div>
+        </div>
     </div>
-    <div class="glass-card">
-      <h3>Leadership</h3>
-      <p>Ownership, alignment, and hands-on approach.</p>
-    </div>
-  </div>
-</section>
 
-  </main>
-
-<!-- IA MINIMIZADA (FLUTUANTE) -->
-<div id="ai-container">
-<button id="ai-trigger" class="ai-trigger">
-<span>AI</span>
-</button>
-
-  <section class="assistant hidden" id="assistant">
-  <div class="assistant-header">
-    <div class="assistant-avatar"></div>
-    <div class="header-info">
-      <h3>GiFlow AI</h3>
-      <p>Contextual Prep</p>
-    </div>
-    <button id="close-ai" class="close-btn">&times;</button>
-  </div>
-  <div class="assistant-modes">
-    <button class="mode-btn active" data-mode="bilingual">Bilingual</button>
-    <button class="mode-btn" data-mode="english">English</button>
-    <button class="mode-btn" data-mode="portuguese">Português</button>
-    <button class="mode-btn" data-mode="translate">Translate</button>
-  </div>
-  <div class="assistant-messages" id="chat-messages">
-    <div class="bot-message">Ready to prep!</div>
-  </div>
-  <form class="assistant-form" id="chat-form">
-    <input type="text" id="user-input" placeholder="Ask me..." />
-    <button type="submit">Send</button>
-  </form>
-</section>
-
-  </div>
-
-<script src="static/js/app.js"></script>
+    <script src="app.js"></script>
 </body>
-
-</html> 
+</html>
